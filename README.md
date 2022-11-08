@@ -10,7 +10,7 @@ Member-2 - Ayushi Vashisth(fp06_514 )
 Member-3 - Akash Sanjay Patade(fw20_0433)
 Member-4 - Atul Harh(fw20_1210 )
 
-# Note :- Respected Teammates, In this the folder structure is in this is
+# Note :- Respected Teammates, In this repo the folder structure is:-
 # 1. Script - Please create all /*.js files*/ here in this folder
 # 2. Styles - Please create all /*.css files*/ here in this folder
 
