@@ -1,0 +1,78 @@
+
+#one{
+    margin-top: -14px;
+    margin-bottom: 10px;
+    text-align: center;
+    background-color: rgb(55, 238, 238);
+    height:52px;
+}
+
+#one>p{
+    padding-top: 12px;
+    font-size: 18px;
+}
+
+#two{
+    margin: auto;
+    width:80%;
+    display: grid;
+    grid-template-columns: 20% 35% 30% 10%;
+}
+
+#two>div>a>img{
+    padding-top: 32px;
+    width:72%;
+}
+
+#three{
+    margin-bottom: -10px;
+    display: grid;
+    grid-template-columns: 30% 20% 22% 22%;
+}
+
+#three>h3{
+    font-size: 18px;
+    color: grey;
+}
+
+#four{
+    margin-top: -10px;
+    display: grid;
+    grid-template-columns: 25% 25%;
+}
+
+#four>h3{
+    font-size: 18px;
+    color: grey;
+}
+
+#five{
+    margin-top: 32px;
+}
+
+#five>input{
+    height:50px;
+    width:90%;
+}
+
+#six{
+    padding-top: 38px;
+    display: grid;
+    grid-template-columns: 40% 40%;
+}
+
+#six>img{
+    width:65%;
+}
+
+#lmore{
+    outline: none;
+    border: none;
+    background-color: transparent;
+    text-decoration: underline;
+
+}
+#lmore:hover{
+    text-decoration:blue;
+    cursor: pointer;
+}
