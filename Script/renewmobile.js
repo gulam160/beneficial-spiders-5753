@@ -70,3 +70,57 @@ const learnMore = () => {
     container.append(div1,div,div2);
     
 }
+
+const photo = ["https://cdn.shopify.com/s/files/1/0650/4044/9786/files/Yellow_Desktop.png?v=1660150368&width=1400",
+"https://cdn.shopify.com/s/files/1/0650/4044/9786/files/Teal_Desktop.png?v=1660150368&width=1400",
+"https://cdn.shopify.com/s/files/1/0650/4044/9786/files/Red_Desktop.png?v=1660150368&width=1400"];
+
+
+let i=0;
+let img=document.createElement('img');
+img.src=photo[0];
+img.style.width = "100%";
+
+
+let cont = document.getElementById("picture");
+cont.style.marginTop="20px";
+cont.append(img);
+
+const plus = () => {
+    let cont = document.getElementById("picture");
+    cont.innerHTML=null;
+    let img = document.createElement('img');
+    img.src = photo[(++i)%3];
+    img.style.width = "100%";
+    cont.append(img);
+    
+}
+
+const minus = () => {
+    let cont = document.getElementById("picture");
+    cont.innerHTML=null;
+    i--;
+    if(i<0)
+    {
+        i=2;
+    }
+    let img = document.createElement('img');
+    img.src = photo[i%3];
+    img.style.width = "100%";
+
+    cont.append(img);
+    
+}
+
+window.onscroll = function() {scrollFunction()};
+function scrollFunction() {
+  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+    document.getElementById("prev").style.display = "none";
+    document.getElementById("next").style.display = "none";
+  }
+  else
+  {
+    document.getElementById("prev").style.display = "block";
+    document.getElementById("next").style.display = "block";
+  }
+}
