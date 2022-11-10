@@ -1,0 +1,115 @@
+{
+  "mobile": [
+    {
+      "id": "1668009152774mob",
+      "name": "IPhone 7 32Gb (Rose Gold) Brand new condition .",
+      "price": "10600",
+      "city": "DAS COLONY, SILCHAR",
+      "image": "https://apollo-singapore.akamaized.net/v1/files/fo2lm9ycxdl-IN/image;s=300x600;q=60"
+    },
+    {
+      "id": "1668009486899mob",
+      "name": "Samsung S22 Ultra & Watch 4",
+      "price": "9000",
+      "city": "Madhya pradesh",
+      "description": "Samsung S22 Ultra & Watch 4 both are in mint condition. Still under 6months warrenty, brand new condition with 0 dents and scratches.",
+      "image": "https://apollo-singapore.akamaized.net/v1/files/uiv5ndsphsme2-IN/image;s=200x400;q=60"
+    },
+    {
+      "id": "1668009956522mob",
+      "name": "New - Samsung Note 20 Ultra 5G -12/128 -International -Duel -With Bill",
+      "price": "39990",
+      "city": "AHMEDABAD",
+      "description": "Samsung Galaxy Note 20 Ultra 5G  12GB 128GB  White Colour  SnapDreagon Processor",
+      "image": "https://apollo-singapore.akamaized.net/v1/files/k6ij4wvbf4yf-IN/image;s=200x400;q=60"
+    },
+    {
+      "id": "1668010689409mob",
+      "name": "OnePlus 9RT",
+      "price": "42000",
+      "city": "kolkata",
+      "description": "8gb ram and 128gb rom  4500 mah battery 65 watt fast charging  Bill box and accessories is available",
+      "image": "https://apollo-singapore.akamaized.net/v1/files/usn2wgxwo5rr-IN/image;s=200x400;q=60"
+    },
+    {
+      "id": "1668010832005mob",
+      "name": "OnePlus ",
+      "price": 30000,
+      "city": "patna",
+      "description": "8gb ram and 128gb rom  4500 mah battery 65 watt fast charging  Bill box and accessories is available",
+      "image": " https://apollo-singapore.akamaized.net/v1/files/yelq4dllt0ce2-IN/image;s=200x400;q=60"
+    },
+    {
+      "id": "1668011138958mob",
+      "brand": "Mi",
+      "name": "Redmi note 10 S (6GB RAM 64GB ROM) SUPPER",
+      "price": 12000,
+      "city": "Hydrabad",
+      "description": "Redmi note 10 S (6GB RAM 64GB ROM) SUPPER AMOLED DISPLAY",
+      "image": "https://apollo-singapore.akamaized.net/v1/files/klamocxo274r1-IN/image;s=200x400;q=60"
+    },
+    {
+      "id": "1668011343818mob",
+      "brand": "poco",
+      "name": "POCO F3GT",
+      "price": 21999,
+      "city": "Punjab",
+      "description": "5G  8/ 128 GB.  Predator black colour.  With all the accessories and bill.  1 year old.",
+      "image": "https://apollo-singapore.akamaized.net/v1/files/m0xns5o1y8vm-IN/image;s=780x0;q=60"
+    },
+    {
+      "id": "1668011485786mob",
+      "brand": "iphone",
+      "name": "iphone 12 mini",
+      "price": 35500,
+      "city": "Bhopal",
+      "description": "iphone 12 mini, 1 month old",
+      "image": "https://apollo-singapore.akamaized.net/v1/files/85z6mszj1fnt1-IN/image;s=200x400;q=60"
+    },
+    {
+      "id": "1668011608164mob",
+      "brand": "iphone",
+      "name": "iphone 11 pro",
+      "price": 36000,
+      "city": "Kashmir",
+      "description": "iphone 11 pro 64gb best condition available",
+      "image": "https://apollo-singapore.akamaized.net/v1/files/3q26tufv2gct-IN/image;s=780x0;q=60"
+    },
+    {
+      "id": "1668068324883mob",
+      "brand": "vivo",
+      "name": "V11 pro dark light bule",
+      "price": 10499,
+      "city": "Haridwar",
+      "description": "Mobile phone is ok",
+      "image": "https://apollo-singapore.akamaized.net/v1/files/190cadjyxiul-IN/image;s=300x600;q=60"
+    },
+    {
+      "id": "1668068620369mob",
+      "brand": "oppo",
+      "name": "OPPO A31 - Mystery Black",
+      "price": 8000,
+      "city": "Bengaluru, Karnataka",
+      "description": "OPPO A31 - Mystery Black, 6GB RAM 128 GB Storage ",
+      "image": "https://apollo-singapore.akamaized.net/v1/files/qt0ahvvkx3ij2-IN/image;s=200x400;q=60"
+    },
+    {
+      "id": "1668068766111mob",
+      "brand": "oppo",
+      "name": "OPPO A7",
+      "price": 6500,
+      "city": "Birgaon, Raipur, Chhattisgarh",
+      "description": "OPPO A7 [[4GB RAM+64GB ROM]]",
+      "image": "https://apollo-singapore.akamaized.net/v1/files/mn18xzi39fb72-IN/image;s=200x400;q=60"
+    },
+    {
+      "id": "1668068883045mob",
+      "brand": "oppo",
+      "name": "Oppo Reno6 5g 8/128",
+      "price": 18000,
+      "city": "Ranidurgawati Ward, Seoni, Madhya Pradesh",
+      "description": "Oppo Reno6 5g 8/128,Shubham Telecom Seoni",
+      "image": "https://apollo-singapore.akamaized.net/v1/files/i322h3ogcgae3-IN/image;s=200x400;q=60"
+    }
+  ]
+}
