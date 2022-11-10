@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="Styles/index.css">
+    <link rel="icon" href="https://tse1.mm.bing.net/th?id=OIP.TUGZPVDFi0NFbJsHzTLZsQHaHa&pid=Api&P=0" type="image/x-icon" />
+    <title>OLX - Free classifieds in India, Buy and Sell for free anywhere in India with OLX Online Classified Advertising</title>
+</head>
+<body>
+    <!-- ===============  Top Navbar  ============ -->
+    <div class="navbar-1">
+        <div id="navbar-A">
+                <img src="https://tse2.mm.bing.net/th?id=OIP.w3Xd5s2MjzBiWOyC9FFEGQHaE7&pid=Api&P=0" alt="">
+            <div id="country" class="country_select">
+                <div class="select">
+                    <p id="text"> Select Your Country</p>
+                    <i class="fa-sharp fa-solid fa-chevron-down" id="moving"></i>
+                </div>
+                <ul class="option_box" id="list">
+                    <li class="option" onclick="myfunction('USA')">
+                        <i class="fa-sharp fa-solid fa-location-dot"></i>
+                        <p>USA</p>
+                    </li>
+                    <li class="option" onclick="myfunction('Canada')">
+                        <i class="fa-sharp fa-solid fa-location-dot"></i>
+                        <p>Canada</p>
+                    </li>
+                    <li class="option" onclick="myfunction('India')">
+                        <i class="fa-sharp fa-solid fa-location-dot"></i>
+                        <p>India</p>
+                    </li>
+                    <li class="option" onclick="myfunction('Pakistan')">
+                        <i class="fa-sharp fa-solid fa-location-dot"></i>
+                        <p>Pakistan</p>
+                    </li>
+                    <li class="option" onclick="myfunction('Sri Lanka')">
+                        <i class="fa-sharp fa-solid fa-location-dot"></i>
+                        <p>Sri Lanka</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="searchItems">
+                <input type="text" class="searchclass" id="searchid" placeholder="Find Cars, mobile phone and More...">
+                <p><i class="fa-solid fa-magnifying-glass"></i></p>
+            </div>
+            <div class="language" id="language1">
+                <div class="selectLanguage" >
+                    <p id="eng_tag">English</p>
+                    <i class="fa-sharp fa-solid fa-chevron-down" id="moving1"></i>
+                </div>
+                <ul class="hin_eng" id="list1">
+                    <li onclick="languageolx('English')">English</li>
+                    <li onclick="languageolx('हिंदी')">हिंदी</li>
+                </ul>
+            </div>
+            <div class="message">
+                <i class="fa-regular fa-comment"></i>
+            </div>
+            <div class="message">
+                <i class="fa-regular fa-bell"></i>
+            </div>
+            <div class="loginlogo">
+                <h3>Login</h3>
+            </div>
+            <div class="selling_page">
+                <button><i class="fa-solid fa-plus"></i>
+                    <p>SELL</p>
+                </button>
+            </div>
+        </div>
+    </div>
+
+        <!-- ===============  Bottom Navbar  ============ -->
+    
+    <div class="navbar-2">
+        <div class="navbar-B">
+            <div class="allCategoies">
+                <h4> ALL CATEGORIES</h4>
+                <i class="fa-sharp fa-solid fa-chevron-down"></i>
+            </div>
+            <!-- <div class="fulldropdown">
+                <div class="propertiesMobile">
+                    <div><h2>OLX Autos(Cars)</h2></div>
+                    <div>
+                        <h2>Properties</h2>
+                        <p>For Sale: Houses & Apartments</p>
+                        <p>For Rent: Houses & Apartments</p>
+                        <p>Lands & Plots</p>
+                        <p>For Rent: Shops & Offices</p>
+                        <p>For Sale: Shops & Offices</p>
+                        <p>PG & Guest Houses</p>
+                    </div>
+                    <div>
+                        <h2>Mobiles</h2>
+                        <p>Mobile Phones</p>
+                        <p>Accessories</p>
+                        <p>Tables</p>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <h2>Jobs</h2>
+                        <p>Data entry & Back office</p>
+                        <p>Sales & Marketing</p>
+                        <p>BPO & Telecaller</p>
+                        <p>Driver</p>
+                        <p>Office Assistant</p>
+                        <p>Delivery & Collection</p>
+                        <p>Teacher</p>
+                        <p>Cook</p>
+                        <p>Receptionist & Front office</p>
+                        <p>Operator & Technician</p>
+                        <p>IT Engineer & Developer</p>
+                        <p>Hotel & Travel Executive</p>
+                        <p>Accountant</p>
+                        <p>Designer</p>
+                        <p>Other Jobs</p>
+                    </div>
+                    <div>
+                        <h2>Bikes</h2>
+                        <p>Motorcycles</p>
+                        <p>Scooters</p>
+                        <p>Spare Parts</p>
+                        <p>Bicycles</p>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <h2>Electronics & Appliances</h2>
+                        <p>TVs, Video - Audio</p>
+                        <p>Kitchen & Other Appliances</p>
+                        <p>Computers & Laptops</p>
+                        <p>Cameras & Lenses</p>
+                        <p>Games & Entertainment</p>
+                        <p>Fridges</p>
+                        <p>Computer Accessories</p>
+                        <p>Hard Disks, Printers & Monitors</p>
+                        <p>ACs</p>
+                        <p>Washing Machines</p>
+                    </div>
+                    <div>
+                        <h2>Commercial Vehicles & Spares</h2>
+                        <p>Commercial & Other Vehicles</p>
+                        <p>Spare Parts</p>
+                    </div>
+                    <div>
+                        <h2>Furniture</h2>
+                        <p>Sofa & Dining</p>
+                        <p>Beds & Wardrobes</p>
+                        <p>Home Decor & Garden</p>
+                        <p>Kids Furniture</p>
+                        <p>Other Household Items</p>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <h2>Fashion</h2>
+                        <p>Men</p>
+                        <p>Women</p>
+                        <p>Kids</p>
+                    </div>
+                    <div>
+                        <h2>Books,Sports & Hobbies</h2>
+                        <p>Books</p>
+                        <p>Gym & Fitness</p>
+                        <p>Musical Instruments</p>
+                        <p>Sports Equipment</p>
+                        <p>Other Hobbies</p>
+                    </div>
+                    <div>
+                        <h2>Pets</h2>
+                        <p>Fishes & Aquarium</p>
+                        <p>Pet Food & Accessories</p>
+                        <p>Dogs</p>
+                        <p>Other Pets</p>
+                    </div>
+                    <div>
+                        <h2>Services</h2>
+                        <p>Electronics & Computer</p>
+                        <p>Education & Classes</p>
+                        <p>Drivers & Taxi</p>
+                        <p>Health & Beauty</p>
+                        <p>Other Services</p>
+                    </div>
+                </div>
+
+            </div> -->
+            <div><p>Cars</p></div>
+            <div><p>Motorcycles</p></div>
+            <div><p>Mobiles Phones</p></div>
+            <div><p>For Sale:Houses & Apartments</p></div>
+            <div><p>OLX Renew(Mobile)</p></div>
+            <div><p>Scooters</p></div>
+            <div><p>Commercial & Other Vehicles</p></div>
+            <div><p>For Rent:Houses & Apartments</p></div>
+        </div>
+    </div>
+
+
+    <!-- ===============  download Image  ============ -->
+    <div class="downlode_app">
+        <div class="downlode">
+            <img src="https://statics.olx.in/external/base/img/phone-app.webp" class="images">
+            <div class="text">
+                <h1>TRY THE OLX APP</h1>
+                <p>Buy, sell and find just about anything using <br>
+                    the app on your mobile.</p>
+            </div>
+            <div class="downlode_store">
+                <p>GET YOUR APP TODAY</p>
+                <img src="https://statics.olx.in/external/base/img/appstore_2x.webp" alt="">
+                <img src="https://statics.olx.in/external/base/img/playstore_2x.webp" alt="">
+            </div>
+        </div>
+    </div>
+    
+
+
+    <!-- ===============footer ===================---> 
+    <footer>
+        <div class="Main_footer">
+            <div class="footer">
+                <div class="footer_box">
+                    <h2>POPULAR LOCATIONS</h2>
+                    <p>Kolkata</p>
+                    <p>Mumbai</p>
+                    <p>Chennai</p>
+                    <p>pune</p>
+                </div>
+                <div class="footer_box">
+                    <h2>TRENDING LOCATIONS</h2>
+                    <p>Bhubaneshwar</p>
+                    <p>Hyderabad</p>
+                    <p>Chandigarh</p>
+                    <p>Nashik</p>
+                </div>
+                <div class="footer_box">
+                    <h2>ABOUT US</h2>
+                    <p>About OLX Group</p>
+                    <p>Careers</p>
+                    <p>Contact Us</p>
+                    <p>OLXPeople</p>
+                    <p>Waah Jobs</p>
+                </div>
+                <div class="footer_box">
+                    <h2>OLX</h2>
+                    <p>Help</p>
+                    <p>Sitemap</p>
+                    <p>Legal & Privacy information</p>
+                    <p>Blog</p>
+                    <p>OLX Autos Sell Car</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>
+<script src="Script/index.js"></script>
