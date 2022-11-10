@@ -1,4 +1,11 @@
 
+#renew_navbar{
+    position:sticky;
+    top:0;
+    background-color: white;
+    margin-top: -5%;
+}
+
 #one{
     margin-top: -14px;
     margin-bottom: 10px;
@@ -14,6 +21,7 @@
 
 #two{
     margin: auto;
+    margin-top: -15px;
     width:80%;
     display: grid;
     grid-template-columns: 20% 35% 30% 10%;
@@ -25,7 +33,7 @@
 }
 
 #three{
-    margin-bottom: -10px;
+    margin-bottom: -15px;
     display: grid;
     grid-template-columns: 30% 20% 22% 22%;
 }
@@ -36,7 +44,7 @@
 }
 
 #four{
-    margin-top: -10px;
+    margin-top: -15px;
     display: grid;
     grid-template-columns: 25% 25%;
 }
@@ -47,11 +55,11 @@
 }
 
 #five{
-    margin-top: 32px;
+    margin-top: 30px;
 }
 
 #five>input{
-    height:50px;
+    height:40px;
     width:90%;
 }
 
@@ -75,4 +83,28 @@
 #lmore:hover{
     text-decoration:blue;
     cursor: pointer;
+}
+
+#renew_slideshow>img{
+    width:100%;
+}
+
+#prev{
+    padding: 15px;
+    position: absolute;
+    top:38%;
+    left:3%;
+    border-radius: 70%;
+    border:none;
+    cursor:pointer;
+}
+
+#next{
+    padding: 15px;
+    position: absolute;
+    top:38%;
+    right:3%;
+    border-radius: 70%;
+    border:none;
+    cursor:pointer;
 }
