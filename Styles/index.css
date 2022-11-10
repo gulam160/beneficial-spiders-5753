@@ -267,6 +267,149 @@
     display: grid;
 }
 
+/* <!-- ===============  Based on your last search  ============ --> */
+.Basedlastsearch{
+    margin-top: 80px;
+    width: 93%;
+    height: 380px;
+    margin-left: 40px;
+    border: 0px solid blue;
+    background-color: #ebeeef;
+}
+.Basedlastsearch h1{
+    margin-left: 40px;
+    margin-bottom: 20px;
+    margin-top: 15px;
+    font-weight: 500;
+}
+.BasedlastsearchClass p{
+    margin-right: 40px;
+    margin-top: 30px;
+    font-weight: 600;
+    text-decoration: underline;
+}
+.BasedlastsearchClass{
+    display: flex;
+    justify-content: space-between;
+}
+
+#container{
+  padding: 0 10vw;
+  display: grid;
+  grid-template-columns: repeat(20,1fr);
+  grid-template-rows: 400px;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
+#container::-webkit-scrollbar {
+    display: none;
+  }
+
+.product_card{
+    height: 280px;
+    width: 300px;
+    border: 1px solid rgba(14,4,5,.2);
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    /* flex: 0 0 auto; */
+    background-color: white;
+
+}
+.product_image{
+    height: 160px;
+    width: 100%;
+    /* object-fit:contain; */
+}
+
+.product_price{
+    color: #002F34;
+    font-family: Roboto,Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    text-align: left;
+    font-weight: bold;
+}
+
+.product_name{
+    font-family: Roboto,Arial, Helvetica, sans-serif;
+    color: #002F34;
+    font-size: 14px;
+    white-space: nowrap;
+    text-align: left;
+    text-decoration: none solid rgba(0,47,52,0.64);
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.product_city{
+    text-align: left;
+}
+
+.product_details{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+.item_style{
+    padding:0 10px;
+    margin: 5px
+}
+
+.heartimg{
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    margin: auto;
+    margin-top: 8px;
+    gap: 10px;
+}
+.product_date{
+    font-size: 14px;
+    text-align: right;
+    margin-right: 10px;
+}
+
+.ri-heart-line{
+    font-size: 20px;
+}
+
+.pre-btn,
+.nxt-btn {
+  border: none;
+  width: 16vw;
+  height: 280px;
+  position: absolute;
+  top: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0px solid black;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, white 100%);
+  cursor: pointer;
+  /* z-index: 0; */
+}
+
+.pre-btn {
+  left: 0;
+  transform: rotate(180deg);
+}
+
+.nxt-btn {
+  right: 0;
+}
+
+.pre-btn img,
+.nxt-btn img {
+  opacity: 0.2;
+}
+
+.pre-btn:hover img,
+.nxt-btn:hover img {
+  opacity: 1;
+}
+
+
 
 
 /* <!-- ===============  download Image  ============ --> */
