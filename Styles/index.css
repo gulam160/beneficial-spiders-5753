@@ -17,21 +17,26 @@
     margin-top: 8px;
     display: flex;
     align-items: center;
-    width: 1300px;
+    width: 1400px;
     margin: auto;
+    border: 0px solid blue;
 }
 #navbar-A img{
     margin-top: 5px;
-    width: 70px;
+    width: 100px;
+    height: 55px;
 }
 .country_select{
     width: 250px;
-    margin-left: 30px;
+    margin-left: 20px;
     margin-top: 5px;
 }
 .select i{
-    font-size: 15px;
+    font-size: 22px;
     transition: all 0.3s;
+    position: relative;
+    bottom: 3px;
+    left: 3px;
 }
 .select{
     width: 100%;
@@ -43,7 +48,6 @@
     align-items: center;
     justify-content: space-between;
     border: 2px solid black;
-
 }
 .option{
     display: flex;
@@ -90,7 +94,7 @@
 }
 .searchclass{
     padding: 10px;
-    width: 400px;
+    width: 550px;
     font-size: 15px;
     border: 2px solid black;
     border-radius: 6px 0 0 6px;
@@ -103,8 +107,11 @@
     display: flex;
 }
 .selectLanguage i{
-    font-size: 15px;
+    font-size: 22px;
     transition: all 0.3s;
+    position: relative;
+    bottom: 3px;
+    left: 3px;
 }
 
 .eng_tag{
@@ -133,8 +140,8 @@
     display: block;
 }
 .message i{
-    font-size: 22px;
-    color: black;
+    font-size: 25px;
+    color: rgb(22, 19, 19);
     cursor: pointer;
     margin-left: 25px;
 }
@@ -185,38 +192,76 @@
     margin-top: 8px;
     display: flex;
     align-items: center;
-    width: 1299px;
+    width: 1400px;
+    border:0px solid #23e5db;
     margin: auto;
-    font-size: 13.8px;
+    font-size: 15px;
 }
 .navbar-B div{
-    margin-left: 15px;
+    margin-left: 25px;
     margin-top: 10px;
+}
+.navbar-B h4:hover{
+    color: #00A495;
+}
+.navbar-B p:hover{
+    color: #00A495;
 }
 .allCategoies{
     display: flex;
+    cursor: pointer;
 }
-.fulldropdown{
+.allCategoies i{
+    font-size: 20px;
+    transition: all 0.03s;
+    position: relative;
+    bottom:2px;
+    left: 7px;
+}
+.fulldropdown {
     display: grid;
     grid-template-columns: repeat(4,1fr);
-    gap: 100px;
-    border:1px solid #23e5db;
+    gap: 10px;
+    box-shadow: 0 0 10px grey;
     margin: auto;
-    
+    display: none;
+    cursor: pointer;
+    width: 90%;
+    height: auto;
+    position: absolute;
+    top: 95px;
 }
-.fulldropdown h2{
+.fulldropdown ul{
+    margin-top: 10px;
+    margin-left: 40px;
+    width: 230px;
+}
+.fulldropdown  h2{
     font-size: 16px;
     font-weight: 700;
-    line-height: 16.1px;
+    line-height: 29.1px;
     margin-bottom: 6x;
+}
+.fulldropdown  h2:hover{
+    color: #00A495;
+}
+.fulldropdown  p:hover{
+    color: #00A495;
 }
 .fulldropdown p{
     font-size: 14px;
-    line-height: 40px;
+    line-height: 35px;
 }
-.fulldropdown div{
-    margin-top: 30px;
-    width: 234px;
+.properties{
+    margin-top: 60px;
+}
+
+.propertiesMobile{
+    background-color: white;    
+    cursor: pointer;
+}
+.hidden1{
+    display: grid;
 }
 
 
@@ -288,5 +333,9 @@
 .footer_box p{
     margin: 8px 0 8px 0;
     cursor: pointer;
+    color: grey;
+}
+.footer_box p:hover{
+    color: black;
 }
 

@@ -11,80 +11,22 @@
 </head>
 <body>
     <!-- ===============  Top Navbar  ============ -->
-    <div class="navbar-1">
-        <div id="navbar-A">
-                <img src="https://tse2.mm.bing.net/th?id=OIP.w3Xd5s2MjzBiWOyC9FFEGQHaE7&pid=Api&P=0" alt="">
-            <div id="country" class="country_select">
-                <div class="select">
-                    <p id="text"> Select Your Country</p>
-                    <i class="fa-sharp fa-solid fa-chevron-down" id="moving"></i>
-                </div>
-                <ul class="option_box" id="list">
-                    <li class="option" onclick="myfunction('USA')">
-                        <i class="fa-sharp fa-solid fa-location-dot"></i>
-                        <p>USA</p>
-                    </li>
-                    <li class="option" onclick="myfunction('Canada')">
-                        <i class="fa-sharp fa-solid fa-location-dot"></i>
-                        <p>Canada</p>
-                    </li>
-                    <li class="option" onclick="myfunction('India')">
-                        <i class="fa-sharp fa-solid fa-location-dot"></i>
-                        <p>India</p>
-                    </li>
-                    <li class="option" onclick="myfunction('Pakistan')">
-                        <i class="fa-sharp fa-solid fa-location-dot"></i>
-                        <p>Pakistan</p>
-                    </li>
-                    <li class="option" onclick="myfunction('Sri Lanka')">
-                        <i class="fa-sharp fa-solid fa-location-dot"></i>
-                        <p>Sri Lanka</p>
-                    </li>
-                </ul>
-            </div>
-            <div class="searchItems">
-                <input type="text" class="searchclass" id="searchid" placeholder="Find Cars, mobile phone and More...">
-                <p><i class="fa-solid fa-magnifying-glass"></i></p>
-            </div>
-            <div class="language" id="language1">
-                <div class="selectLanguage" >
-                    <p id="eng_tag">English</p>
-                    <i class="fa-sharp fa-solid fa-chevron-down" id="moving1"></i>
-                </div>
-                <ul class="hin_eng" id="list1">
-                    <li onclick="languageolx('English')">English</li>
-                    <li onclick="languageolx('हिंदी')">हिंदी</li>
-                </ul>
-            </div>
-            <div class="message">
-                <i class="fa-regular fa-comment"></i>
-            </div>
-            <div class="message">
-                <i class="fa-regular fa-bell"></i>
-            </div>
-            <div class="loginlogo">
-                <h3>Login</h3>
-            </div>
-            <div class="selling_page">
-                <button><i class="fa-solid fa-plus"></i>
-                    <p>SELL</p>
-                </button>
-            </div>
-        </div>
-    </div>
+    <div class="navbar-1" id="navbar"></div>
 
         <!-- ===============  Bottom Navbar  ============ -->
     
     <div class="navbar-2">
         <div class="navbar-B">
-            <div class="allCategoies">
+            <div class="allCategoies" id="allCategoiesid">
                 <h4> ALL CATEGORIES</h4>
-                <i class="fa-sharp fa-solid fa-chevron-down"></i>
+                <i class="fa-sharp fa-solid fa-chevron-down" id="moving2"></i>
             </div>
-            <!-- <div class="fulldropdown">
-                <div class="propertiesMobile">
-                    <div><h2>OLX Autos(Cars)</h2></div>
-                    <div>
+            <div class="fulldropdown" id="list2">
+                <ul class="propertiesMobile" type="none">
+                    <li>
+                        <h2>OLX Autos(Cars)</h2>
+                    </li>
+                    <li class="properties">
                         <h2>Properties</h2>
                         <p>For Sale: Houses & Apartments</p>
                         <p>For Rent: Houses & Apartments</p>
@@ -92,16 +34,16 @@
                         <p>For Rent: Shops & Offices</p>
                         <p>For Sale: Shops & Offices</p>
                         <p>PG & Guest Houses</p>
-                    </div>
-                    <div>
+                    </li>
+                    <li>
                         <h2>Mobiles</h2>
                         <p>Mobile Phones</p>
                         <p>Accessories</p>
                         <p>Tables</p>
-                    </div>
-                </div>
-                <div>
-                    <div>
+                    </li>
+                </ul>
+                <ul class="propertiesMobile" type="none">
+                    <li>
                         <h2>Jobs</h2>
                         <p>Data entry & Back office</p>
                         <p>Sales & Marketing</p>
@@ -118,17 +60,17 @@
                         <p>Accountant</p>
                         <p>Designer</p>
                         <p>Other Jobs</p>
-                    </div>
-                    <div>
+                    </li>
+                    <li>
                         <h2>Bikes</h2>
                         <p>Motorcycles</p>
                         <p>Scooters</p>
                         <p>Spare Parts</p>
                         <p>Bicycles</p>
-                    </div>
-                </div>
-                <div>
-                    <div>
+                    </li>
+                </ul>
+                <ul class="propertiesMobile" type="none">
+                    <li>
                         <h2>Electronics & Appliances</h2>
                         <p>TVs, Video - Audio</p>
                         <p>Kitchen & Other Appliances</p>
@@ -140,54 +82,53 @@
                         <p>Hard Disks, Printers & Monitors</p>
                         <p>ACs</p>
                         <p>Washing Machines</p>
-                    </div>
-                    <div>
+                    </li>
+                    <li>
                         <h2>Commercial Vehicles & Spares</h2>
                         <p>Commercial & Other Vehicles</p>
                         <p>Spare Parts</p>
-                    </div>
-                    <div>
+                    </li>
+                    <li>
                         <h2>Furniture</h2>
                         <p>Sofa & Dining</p>
                         <p>Beds & Wardrobes</p>
                         <p>Home Decor & Garden</p>
                         <p>Kids Furniture</p>
                         <p>Other Household Items</p>
-                    </div>
-                </div>
-                <div>
-                    <div>
+                    </li>
+                </ul>
+                <ul class="propertiesMobile" type="none">
+                    <li>
                         <h2>Fashion</h2>
                         <p>Men</p>
                         <p>Women</p>
                         <p>Kids</p>
-                    </div>
-                    <div>
+                    </li>
+                    <li>
                         <h2>Books,Sports & Hobbies</h2>
                         <p>Books</p>
                         <p>Gym & Fitness</p>
                         <p>Musical Instruments</p>
                         <p>Sports Equipment</p>
                         <p>Other Hobbies</p>
-                    </div>
-                    <div>
+                    </li>
+                    <li>
                         <h2>Pets</h2>
                         <p>Fishes & Aquarium</p>
                         <p>Pet Food & Accessories</p>
                         <p>Dogs</p>
                         <p>Other Pets</p>
-                    </div>
-                    <div>
+                    </li>
+                    <li>
                         <h2>Services</h2>
                         <p>Electronics & Computer</p>
                         <p>Education & Classes</p>
                         <p>Drivers & Taxi</p>
                         <p>Health & Beauty</p>
                         <p>Other Services</p>
-                    </div>
-                </div>
-
-            </div> -->
+                    </li>
+                </ul>
+            </div>
             <div><p>Cars</p></div>
             <div><p>Motorcycles</p></div>
             <div><p>Mobiles Phones</p></div>
@@ -220,43 +161,7 @@
 
 
     <!-- ===============footer ===================---> 
-    <footer>
-        <div class="Main_footer">
-            <div class="footer">
-                <div class="footer_box">
-                    <h2>POPULAR LOCATIONS</h2>
-                    <p>Kolkata</p>
-                    <p>Mumbai</p>
-                    <p>Chennai</p>
-                    <p>pune</p>
-                </div>
-                <div class="footer_box">
-                    <h2>TRENDING LOCATIONS</h2>
-                    <p>Bhubaneshwar</p>
-                    <p>Hyderabad</p>
-                    <p>Chandigarh</p>
-                    <p>Nashik</p>
-                </div>
-                <div class="footer_box">
-                    <h2>ABOUT US</h2>
-                    <p>About OLX Group</p>
-                    <p>Careers</p>
-                    <p>Contact Us</p>
-                    <p>OLXPeople</p>
-                    <p>Waah Jobs</p>
-                </div>
-                <div class="footer_box">
-                    <h2>OLX</h2>
-                    <p>Help</p>
-                    <p>Sitemap</p>
-                    <p>Legal & Privacy information</p>
-                    <p>Blog</p>
-                    <p>OLX Autos Sell Car</p>
-                </div>
-            </div>
-        </div>
-    </footer>
-    
+    <div id="footer"></div>
 </body>
 </html>
-<script src="Script/index.js"></script>
+<script src="Script/index.js" type="module"></script>
