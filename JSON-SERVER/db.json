@@ -110,6 +110,24 @@
       "city": "Ranidurgawati Ward, Seoni, Madhya Pradesh",
       "description": "Oppo Reno6 5g 8/128,Shubham Telecom Seoni",
       "image": "https://apollo-singapore.akamaized.net/v1/files/i322h3ogcgae3-IN/image;s=200x400;q=60"
+    },
+    {
+      "id": "1668097996971mob",
+      "brand": "Jeep",
+      "name": "7448383289",
+      "price": 1355000,
+      "city": "Delhi",
+      "description": "PUNKUNNAM, THRISSUR",
+      "image": "https://apollo-singapore.akamaized.net/v1/files/91pfegw2ks6f2-IN/image;s=300x600;q=60"
+    },
+    {
+      "id": "1668098147463mob",
+      "brand": "Jeet",
+      "name": "Jeep",
+      "price": 1355000,
+      "city": "PUNKUNNAM, THRISSUR",
+      "description": "Jeep Compass 2.0 Longitude, 2018, Diesel",
+      "image": "https://apollo-singapore.akamaized.net/v1/files/91pfegw2ks6f2-IN/image;s=300x600;q=60"
     }
   ]
 }
