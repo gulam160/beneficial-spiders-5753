@@ -68,18 +68,6 @@ language1.addEventListener("click",()=>{
 });
 
 
-// let eng_tag1 = document.getElementById("eng_tag");
-// let hin_eng = document.querySelector(".hin_eng");
-// let language = document.querySelector(".language");
-
-// language.addEventListener("click",()=>{
-//     hin_eng.classList.toggle("display_div")
-// })
-
-// function languageolx(anyone){
-//     eng_tag.innerHTML =anyone;
-// }
-
 let allCategoiesid = document.getElementById("allCategoiesid");
 let moving2 = document.getElementById("moving2");
 let list2 = document.getElementById("list2");
