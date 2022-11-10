@@ -70,6 +70,7 @@
     box-shadow: 0 0 10px grey;
     background-color: white;
     display: none;
+    z-index: 1;
     position: absolute;
     top: 60px;
 }
@@ -222,6 +223,7 @@
     display: grid;
     grid-template-columns: repeat(4,1fr);
     gap: 10px;
+    background-color: white;
     box-shadow: 0 0 10px grey;
     margin: auto;
     display: none;
@@ -230,6 +232,7 @@
     height: auto;
     position: absolute;
     top: 95px;
+    z-index: 100;
 }
 .fulldropdown ul{
     margin-top: 10px;
