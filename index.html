@@ -1,24 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="Styles/index.css">
+
+    <link rel="stylesheet" href="Styles/Navbar.css">
+    <link rel="stylesheet" href="Styles/footer.css">
+
+    <!-- <link rel="stylesheet" href="Styles/mobile.css"> -->
+
     <link rel="icon" href="https://tse1.mm.bing.net/th?id=OIP.TUGZPVDFi0NFbJsHzTLZsQHaHa&pid=Api&P=0" type="image/x-icon" />
+    <script src="http://translate.google.com/translate_a/element.js?cd=loadGoogleTtanslate"></script>
     <title>OLX - Free classifieds in India, Buy and Sell for free anywhere in India with OLX Online Classified Advertising</title>
 </head>
 <body>
     <!-- ===============  Top Navbar  ============ -->
-    <div class="navbar-1" id="navbar"></div>
 
-        <!-- ===============  Bottom Navbar  ============ -->
+    <div class="navbar-1" id="navbar"></div>
+    <!-- <div id="google_translate_element"></div> -->
+
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+}
+</script>
+
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    
+
+    <!-- ===============  Bottom Navbar  ============ -->
     
     <div class="navbar-2">
         <div class="navbar-B">
             <div class="allCategoies" id="allCategoiesid">
                 <h4> ALL CATEGORIES</h4>
+                
                 <i class="fa-sharp fa-solid fa-chevron-down" id="moving2"></i>
             </div>
             <div class="fulldropdown" id="list2">
@@ -141,7 +161,46 @@
     </div>
 
 
+    <!-- ===============  ad 1  ============ -->
+
+
+    <div class="ad_img">
+        <img src="https://newspaperads.ads2publish.com/wp-content/uploads/2019/04/olx-set-hai-jo-chaahey-becho-jo-chaahey-khareedo-on-the-all-new-olx-ad-times-of-india-delhi-27-03-2019.png">
+        <i class="fa-regular fa-rectangle-xmark" id="ad_icon"></i>
+    </div>
+
+
+    <!-- ===============  Based on your last search  ============ -->
+
+    <div class="Basedlastsearch">
+        <div class="BasedlastsearchClass">
+            <h1>Based on your last search</h1>
+            <p>View more</p>
+        </div>
+        <button class="pre-btn"><img src="images/arrow.png" alt=""></button>
+        <button class="nxt-btn"><img src="images/arrow.png" alt=""></button>
+        <div id="container"></div>
+    </div>
+
+    <div id="Fresh_recommendations">
+        <h1>Fresh recommendations</h1>
+        <div id="random-container"></div>
+    </div>
+
+    <!-- =============================== * ad 2 * ============================================ -->
+
+
+    <!-- <div class="ads_img2">
+        <img src="https://tse2.mm.bing.net/th?id=OIP.JUS9ZlDJaIzAWX0UEqIqXwHaD3&pid=Api&P=0">
+        <i class="fa-regular fa-rectangle-xmark" id="adicon2"></i>
+    </div>    
+
+    <h1>Fresh recommendations</h1>
+    <div id="random-container"></div> -->
+
+
     <!-- ===============  download Image  ============ -->
+
     <div class="downlode_app">
         <div class="downlode">
             <img src="https://statics.olx.in/external/base/img/phone-app.webp" class="images">
@@ -158,9 +217,8 @@
         </div>
     </div>
     
-
-
     <!-- ===============footer ===================---> 
+    
     <div id="footer"></div>
 </body>
 </html>
