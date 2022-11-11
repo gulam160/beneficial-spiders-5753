@@ -43,6 +43,7 @@ ul{
     display: flex;
     align-items: center;
     font-family: Helvetica, sans-serif;
+    
 }
 
 
@@ -117,3 +118,76 @@ ul{
 .ri-heart-line{
     font-size: 20px;
 }
+
+/* city */
+.listcity{
+    width: 100%;
+    padding: 10px;
+    
+}
+
+.wrapper{
+    width: 200px;
+    padding: 20px;
+    height: 150px;
+}
+
+/*     budget slider    */
+
+.slidecontainer {
+    width: 100%;
+    margin-top: 25px;
+    margin-bottom: 26px;
+  }
+  
+  .slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 25px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+  }
+  
+  .slider:hover {
+    opacity: 1;
+  }
+  
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: #04AA6D;
+    cursor: pointer;
+  }
+  
+  .slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: #04AA6D;
+    cursor: pointer;
+  }
+
+  #budVal{
+    background-color: #002f34;
+    color: white;
+    padding: 9px;
+    border: 0;
+    border-radius: 3px;
+    width: 28%;
+    font-weight: bold;
+  }
+
+  /* BRAND */
+
+  .checkinput{
+    height: 21px;
+    width: 20px;
+}
+
+.mob_div{
+    
+margin-top: 20px;}
