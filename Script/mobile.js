@@ -1,5 +1,5 @@
 
-let url=`http://localhost:3000/mobile`
+let url=`https://olxdatabaseapi.herokuapp.com/mobile`
 let getData=async()=>{
     let res=await fetch(url);
     res=await res.json();
