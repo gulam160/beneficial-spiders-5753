@@ -3,7 +3,6 @@ document.getElementById("navbar").innerHTML=navbar();
 import {footer} from "../components/footer.js";
 document.getElementById("footer").innerHTML=footer();
 
-
 let country = document.getElementById("country");
 let moving = document.getElementById("moving");
 let text = document.getElementById("text");
@@ -348,9 +347,7 @@ let rendorDom=(data)=>{
         cont.append(product)
     });
 }
-
      //  =============================== * ad 1 * ============================================
-
 
      let ad_img = document.querySelector('.ad_img');
      let ad_icon = document.getElementById('ad_icon');

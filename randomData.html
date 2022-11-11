@@ -20,13 +20,10 @@
 </body>
 </html>
 <script>
-
 const api = `http://localhost:3000/randomData`;
-
 let catchinput = (tag) => {
   return document.getElementById(tag).value;
 };
-
 //---------------step 1, get input values ------------
 let Add_product = async () => {
   let date = catchinput("date");
@@ -45,7 +42,6 @@ let Add_product = async () => {
     description:desc,
     image: img,
   };
-
   // POST Request
   //----------Step 3, POST Request --------
   let res = await fetch(api, {
@@ -56,5 +52,4 @@ let Add_product = async () => {
     },
   });
 };
-
 </script>
