@@ -2,37 +2,42 @@
   "mobile": [
     {
       "id": "1668009152774mob",
+      "brand": "iphone",
       "name": "IPhone 7 32Gb (Rose Gold) Brand new condition .",
-      "price": "10600",
+      "price": 10600,
       "city": "DAS COLONY, SILCHAR",
       "image": "https://apollo-singapore.akamaized.net/v1/files/fo2lm9ycxdl-IN/image;s=300x600;q=60"
     },
     {
       "id": "1668009486899mob",
+      "brand": "samsung",
       "name": "Samsung S22 Ultra & Watch 4",
-      "price": "9000",
+      "price": 9000,
       "city": "Madhya pradesh",
       "description": "Samsung S22 Ultra & Watch 4 both are in mint condition. Still under 6months warrenty, brand new condition with 0 dents and scratches.",
       "image": "https://apollo-singapore.akamaized.net/v1/files/uiv5ndsphsme2-IN/image;s=200x400;q=60"
     },
     {
       "id": "1668009956522mob",
+      "brand": "samsung",
       "name": "New - Samsung Note 20 Ultra 5G -12/128 -International -Duel -With Bill",
-      "price": "39990",
+      "price": 39990,
       "city": "AHMEDABAD",
       "description": "Samsung Galaxy Note 20 Ultra 5G  12GB 128GB  White Colour  SnapDreagon Processor",
       "image": "https://apollo-singapore.akamaized.net/v1/files/k6ij4wvbf4yf-IN/image;s=200x400;q=60"
     },
     {
       "id": "1668010689409mob",
+      "brand": "oneplus",
       "name": "OnePlus 9RT",
-      "price": "42000",
+      "price": 42000,
       "city": "kolkata",
       "description": "8gb ram and 128gb rom  4500 mah battery 65 watt fast charging  Bill box and accessories is available",
       "image": "https://apollo-singapore.akamaized.net/v1/files/usn2wgxwo5rr-IN/image;s=200x400;q=60"
     },
     {
       "id": "1668010832005mob",
+      "brand": "oneplus",
       "name": "OnePlus ",
       "price": 30000,
       "city": "patna",
@@ -41,7 +46,7 @@
     },
     {
       "id": "1668011138958mob",
-      "brand": "Mi",
+      "brand": "mi",
       "name": "Redmi note 10 S (6GB RAM 64GB ROM) SUPPER",
       "price": 12000,
       "city": "Hydrabad",
@@ -128,6 +133,15 @@
       "city": "PUNKUNNAM, THRISSUR",
       "description": "Jeep Compass 2.0 Longitude, 2018, Diesel",
       "image": "https://apollo-singapore.akamaized.net/v1/files/91pfegw2ks6f2-IN/image;s=300x600;q=60"
+    },
+    {
+      "id": "1668176073771mob",
+      "brand": "mi",
+      "name": "Redmi note 11T 5g 128gb",
+      "price": 12600,
+      "city": "Nishant Colony, Sangli (-Miraj), Maharashtra",
+      "description": "Redmi note 11 5g",
+      "image": "https://apollo-singapore.akamaized.net/v1/files/yy7gd0ek0ryn3-IN/image;s=200x400;q=60"
     }
   ]
 }
