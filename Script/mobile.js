@@ -80,5 +80,108 @@ let upMob=document.getElementById("_up_mob").addEventListener("click",()=>{
    
 })
 
+
+
+
 //--------------------------------------------------------------------
+let state = [
+    "Andhra Pradesh",
+    "Arunachal Pradesh",
+    "Assam",
+    "Bihar",
+    "Chhattisgarh",
+    "Goa",
+    "Gujarat",
+    "Haryana",
+    "Himachal Pradesh",
+    "Jammu and Kashmir",
+    "Jharkhand",
+    "Karnataka",
+    "Kerala",
+    "Madhya Pradesh",
+    "Maharashtra",
+    "Manipur",
+    "Meghalaya",
+    "Mizoram",
+    "Nagaland",
+    ]
+    let list = document.createElement("select");
+    list.setAttribute("class","listcity");
+    let opt = "";
+    
+    for (let x of state) {
+      opt = document.createElement("option");
+    
+      opt.innerText = x;
+      
+      list.append(opt);
+    }
+    document.querySelector("#city_section").append(list);
+    
+
+document.getElementById("_up_city").style.display="none";
+let downCity=document.getElementById("_down_city").addEventListener("click",()=>{
+    let upCity=document.getElementById("_up_city").style.display="block";
+    let upcity2=document.getElementById("_down_city").style.display="none";
+    let mobsec=document.getElementById("locat_section").style.display="none"
+})
+
+let upCity=document.getElementById("_up_city").addEventListener("click",()=>{
+    
+    let upMob2=document.getElementById("_down_city").style.display="block";
+    let downMob=document.getElementById("_up_city").style.display="none";
+    let mobsec=document.getElementById("locat_section").style.display="block"
+   
+})
+//--------------------------------------------------------------
+
+//----------------- budget ------------------
+
+
+document.getElementById("_up_bud").style.display="none";
+
+let downBud=document.getElementById("_down_bud").addEventListener("click",()=>{
+    let upBud=document.getElementById("_up_bud").style.display="block";
+    let upBud2=document.getElementById("_down_bud").style.display="none";
+    let Budsec=document.querySelector(".slidecontainer").style.display="none"
+})
+
+let upBud=document.getElementById("_up_bud").addEventListener("click",()=>{
+    
+    let upBud2=document.getElementById("_down_bud").style.display="block";
+    let downBud=document.getElementById("_up_bud").style.display="none";
+   let Budsec=document.querySelector(".slidecontainer").style.display="block"
+   
+})
+
+var slider = document.getElementById("myRange");
+var output = document.getElementById("demo");
+output.innerHTML = slider.value;
+
+slider.oninput = function() {
+  output.innerHTML = this.value;
+}
+
+
+//-----------------  BRAND ----------------------
+
+
+
+document.getElementById("_up_brnd").style.display="none";
+
+let downBrnd=document.getElementById("_down_brnd").addEventListener("click",()=>{
+    let upBrnd=document.getElementById("_up_brnd").style.display="block";
+    let upBrnd2=document.getElementById("_down_brnd").style.display="none";
+    let Budsec=document.getElementById("style_checkbox").style.display="none"
+})
+
+let upBrnd=document.getElementById("_up_brnd").addEventListener("click",()=>{
+    
+    let upBrnd2=document.getElementById("_down_brnd").style.display="block";
+    let downBrnd=document.getElementById("_up_brnd").style.display="none";
+   let Budsec=document.getElementById("style_checkbox").style.display="block"
+   
+})
+
+
 

@@ -47,11 +47,18 @@ let eng_tag = document.getElementById("eng_tag");
 let eng_eng=document.getElementById("lang_eng");
 eng_eng.addEventListener("click",()=>{
     eng_tag.innerText="English";
+
 });
+
+}
 let eng_hin=document.getElementById("lang_hin");
 eng_hin.addEventListener("click",()=>{
     eng_tag.innerText="हिंदी";
+
 });
+
+}
+
 let c=0;
 language1.addEventListener("click",()=>{
     c++;
@@ -250,7 +257,6 @@ DisplayData(randomProduct);
         });
     }
 
-
     const productContainers = [...document.querySelectorAll('#container')];
 const nxtBtn = [...document.querySelectorAll('.nxt-btn')];
 const preBtn = [...document.querySelectorAll('.pre-btn')];
@@ -360,6 +366,9 @@ let rendorDom=(data)=>{
       //  =============================== * ad 2 * ============================================
 
 
+    const productContainers = [...document.querySelectorAll('#container')];
+const nxtBtn = [...document.querySelectorAll('.nxt-btn')];
+const preBtn = [...document.querySelectorAll('.pre-btn')];
 
       let adicon2 = document.getElementById('adicon2');
       let ads_img2 = document.querySelector('.ads_img2');
@@ -367,4 +376,15 @@ let rendorDom=(data)=>{
       adicon2.addEventListener('click', () => {
           ads_img2.style = 'display: none';
       });
+productContainers.forEach((item, i) => {
+    let containerDimensions = item.getBoundingClientRect();
+    let containerWidth = containerDimensions.width;
 
+    nxtBtn[i].addEventListener('click', () => {
+        item.scrollLeft += containerWidth;
+    })
+
+    preBtn[i].addEventListener('click', () => {
+        item.scrollLeft -= containerWidth;
+    })
+})
