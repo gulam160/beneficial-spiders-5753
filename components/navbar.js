@@ -33,6 +33,7 @@ let navbar=()=>{
                     <input type="text" class="searchclass" id="searchid" placeholder="Find Cars, mobile phone and More...">
                     <p><i class="fa-solid fa-magnifying-glass"></i></p>
                 </div>
+                <div id="google_translate_element"></div>
                 <div class="language" id="language1">
                     <div class="selectLanguage" >
                         <p id="eng_tag">English</p>

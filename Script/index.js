@@ -46,13 +46,13 @@ let list1 = document.getElementById("list1");
 let eng_tag = document.getElementById("eng_tag");
 
 let eng_eng=document.getElementById("lang_eng");
-eng_eng.onclick=()=>{
+eng_eng.addEventListener("click",()=>{
     eng_tag.innerText="English";
-}
+});
 let eng_hin=document.getElementById("lang_hin");
-eng_hin.onclick=()=>{
+eng_hin.addEventListener("click",()=>{
     eng_tag.innerText="हिंदी";
-}
+});
 let c=0;
 language1.addEventListener("click",()=>{
     c++;
@@ -63,6 +63,9 @@ language1.addEventListener("click",()=>{
     }
     moving1.classList.toggle("roted");
 });
+function loaderGoogleTranslate(){
+    new google.translate.TranslateElement("list1")
+}
 
 
 let allCategoiesid = document.getElementById("allCategoiesid");
@@ -265,3 +268,106 @@ productContainers.forEach((item, i) => {
         item.scrollLeft -= containerWidth;
     })
 })
+
+
+let url=`http://localhost:3000/randomData`
+let getData=async()=>{
+    let res=await fetch(url);
+    res=await res.json();
+    console.log(res)
+    rendorDom(res)
+
+}
+
+getData()
+
+let Createelem=(tag)=>{
+    return document.createElement(tag);
+}
+
+let card=({name,price,date,city,description,image})=>{
+    let div=Createelem('div');
+    let pimg=Createelem('img');
+    let pheart=Createelem('span');
+    let imgcont=Createelem('div');
+    let div2=Createelem('div');
+    let pprice=Createelem('p');
+    let pname=Createelem('p');
+    let pdescription = Createelem("p");
+    let div3=Createelem("div");
+    let pdate = Createelem('p')
+    let pcity=Createelem('p');
+
+    pimg.src=image;
+    pname.innerHTML=name;
+    pdate.innerHTML=date;
+    pcity.innerHTML=city;
+    pdescription.innerHTML=description;
+    pprice.innerHTML=`₹ ${price}`;
+    pheart.innerHTML=`<i class="fa-regular fa-heart"></i>`
+    pdate.innerHTML=date;
+
+            div.setAttribute("class","product_card");
+            imgcont.setAttribute("class","heartimg")
+            pimg.setAttribute("class","product_image")
+            pprice.setAttribute("class","product_price item_style");
+            pdescription.setAttribute("class","product_city item_style");
+            pname.setAttribute("class","product_name item_style");
+            pdate.setAttribute("class","product_date");
+            pcity.setAttribute("class","product_city");
+            pheart.setAttribute("class","product_heart");
+
+            div2.setAttribute("class","product_details");
+            div3.setAttribute("class","city_date");
+
+            // div.onclick=()=>{
+            //     console.log("click")
+            // }
+            div2.append(pprice,pname,pdescription);
+            div3.append(pcity,pdate);
+            imgcont.append(pimg,pheart);
+            div.append(imgcont,div2,div3);
+            return div;
+
+}
+
+let pheart=document.getElementsByClassName("product_heart");
+pheart.onclick=()=>{
+    console.log("heart")
+    pheart.innerHTML=`<i class="fa-solid fa-heart"></i>`
+    // pheart.style.
+}
+
+
+let rendorDom=(data)=>{
+    let cont=document.getElementById("random-container");
+    cont.innerHTML=null;
+    data.forEach((el) => {
+      //  console.log(el)
+        let product=card(el);
+        cont.append(product)
+    });
+}
+
+     //  =============================== * ad 1 * ============================================
+
+
+     let ad_img = document.querySelector('.ad_img');
+     let ad_icon = document.getElementById('ad_icon');
+
+
+     ad_icon.addEventListener('click', () => {
+         ad_img.style = `display: none`;
+     });
+
+      //  =============================== * ad 2 * ============================================
+
+
+
+      let adicon2 = document.getElementById('adicon2');
+      let ads_img2 = document.querySelector('.ads_img2');
+
+      adicon2.addEventListener('click', () => {
+          ads_img2.style = 'display: none';
+      });
+
