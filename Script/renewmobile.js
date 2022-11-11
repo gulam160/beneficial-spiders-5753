@@ -124,3 +124,42 @@ function scrollFunction() {
     document.getElementById("next").style.display = "block";
   }
 }
+
+let url=`https://sleepy-headland-48374.herokuapp.com/renewMobile`;
+
+const getData = async () => {
+    let res = await fetch(url);
+    let data = await res.json();
+    renderDom(data);
+}
+
+getData();
+
+const renderDom = (data) => {
+    let favourites = document.getElementById("favourites");
+    favourites.innerHTML=null;
+    favourites.style.width="75%";
+    favourites.style.margin = "auto";
+    favourites.style.display = "grid";
+    favourites.style.gridTemplateColumns = "25% 25% 25% 25%";
+    
+    data.forEach(({id,image,brand,model,price}) => {
+        let div = document.createElement('div');
+        div.style.cursor="pointer";
+        let i = document.createElement('img');
+        i.src=image;
+        i.style.width = "100%";
+        
+        let b =document.createElement('h3');
+        b.innerText=`${brand} ${model}`;
+        b.style.textAlign = "center";
+
+        let p =document.createElement('h4');
+        p.innerText = `From Rs. ${price}`;
+        p.style.textAlign = "center";
+        p.style.color = "teal";
+
+        div.append(i,b,p);
+        favourites.append(div);
+    });
+}
