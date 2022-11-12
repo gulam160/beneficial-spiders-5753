@@ -3,6 +3,8 @@ document.getElementById("navbar").innerHTML=navbar();
 import {footer} from "../components/footer.js";
 document.getElementById("footer").innerHTML=footer();
 
+// ========================== Navbar top ==========================
+
 let country = document.getElementById("country");
 let moving = document.getElementById("moving");
 let text = document.getElementById("text");
@@ -70,6 +72,7 @@ function loaderGoogleTranslate(){
     new google.translate.TranslateElement("list1")
 }
 
+// ========================== Navbar Bottom ==========================
 
 let allCategoiesid = document.getElementById("allCategoiesid");
 let moving2 = document.getElementById("moving2");
@@ -79,6 +82,18 @@ allCategoiesid.addEventListener("click",()=>{
     list2.classList.toggle("hidden1");
     moving2.classList.toggle("roted");
 });
+
+  //  =============================== * ad 1 * =======================
+
+  let ad_img = document.querySelector('.ad_img');
+  let ad_icon = document.getElementById('ad_icon');
+
+
+  ad_icon.addEventListener('click', () => {
+      ad_img.style = `display: none`;
+  });
+
+// <!-- ===============  Based on your last search  ===================
 
 let randomProduct=[
     {
@@ -255,8 +270,8 @@ DisplayData(randomProduct);
     }
 
     const productContainers = [...document.querySelectorAll('#container')];
-const nxtBtn = [...document.querySelectorAll('.nxt-btn')];
-const preBtn = [...document.querySelectorAll('.pre-btn')];
+    const nxtBtn = [...document.querySelectorAll('.nxt-btn')];
+    const preBtn = [...document.querySelectorAll('.pre-btn')];
 
 productContainers.forEach((item, i) => {
     let containerDimensions = item.getBoundingClientRect();
@@ -271,6 +286,7 @@ productContainers.forEach((item, i) => {
     })
 })
 
+// <!-- ===============  Fresh recommendations  ======================
 
 let url=`http://localhost:3000/randomData`
 let getData=async()=>{
@@ -330,17 +346,12 @@ let card=({name,price,date,city,description,image})=>{
             imgcont.append(pimg,pheart);
             div.append(imgcont,div2,div3);
             return div;
-
 }
-
 let pheart=document.getElementsByClassName("product_heart");
 pheart.onclick=()=>{
     console.log("heart")
     pheart.innerHTML=`<i class="fa-solid fa-heart"></i>`
-    // pheart.style.
 }
-
-
 let rendorDom=(data)=>{
     let cont=document.getElementById("random-container");
     cont.innerHTML=null;
@@ -350,38 +361,12 @@ let rendorDom=(data)=>{
         cont.append(product)
     });
 }
-     //  =============================== * ad 1 * ============================================
 
-     let ad_img = document.querySelector('.ad_img');
-     let ad_icon = document.getElementById('ad_icon');
+      //  =============================== * ad 2 * =================================
 
+      let adicon2 = document.getElementById('adicon2');
+      let ads_img2 = document.querySelector('.ads_img2');
 
-     ad_icon.addEventListener('click', () => {
-         ad_img.style = `display: none`;
-     });
-
-      //  =============================== * ad 2 * ============================================
-
-
-//     const productContainers = [...document.querySelectorAll('#container')];
-// const nxtBtn = [...document.querySelectorAll('.nxt-btn')];
-// const preBtn = [...document.querySelectorAll('.pre-btn')];
-
-//       let adicon2 = document.getElementById('adicon2');
-//       let ads_img2 = document.querySelector('.ads_img2');
-
-//       adicon2.addEventListener('click', () => {
-//           ads_img2.style = 'display: none';
-//       });
-// productContainers.forEach((item, i) => {
-//     let containerDimensions = item.getBoundingClientRect();
-//     let containerWidth = containerDimensions.width;
-
-//     nxtBtn[i].addEventListener('click', () => {
-//         item.scrollLeft += containerWidth;
-//     })
-
-//     preBtn[i].addEventListener('click', () => {
-//         item.scrollLeft -= containerWidth;
-//     })
-// })
+      adicon2.addEventListener('click', () => {
+          ads_img2.style = 'display: none';
+      });
