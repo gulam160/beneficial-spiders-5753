@@ -154,13 +154,31 @@ let upBud=document.getElementById("_up_bud").addEventListener("click",()=>{
    
 })
 
+//-------------------price   range ---------
 var slider = document.getElementById("myRange");
 var output = document.getElementById("demo");
 output.innerHTML = slider.value;
 
 slider.oninput = function() {
-  output.innerHTML = this.value;
+   output.innerHTML = this.value; 
+
 }
+
+let Rvalu=+""
+slider.addEventListener("change",()=>{
+    Rvalu=+slider.value
+})
+console.log(Rvalu)
+ document.getElementById("budVal").addEventListener("click",async()=>{
+    console.log(typeof Rvalu,Rvalu);
+    let res = await fetch(`${url}?price_lte=${Rvalu}`)
+    let data = await res.json();
+    rendorDom(data);
+    console.log(data)
+
+ })
+
+
 
 
 //-----------------  BRAND ----------------------
@@ -183,5 +201,44 @@ let upBrnd=document.getElementById("_up_brnd").addEventListener("click",()=>{
    
 })
 
+//--------------    FILTER BRAND      -------   
 
+document.getElementById("iphone").addEventListener("click",async()=>{
+    let res = await fetch(`${url}?brand=iphone`)
+    let data = await res.json();
+    rendorDom(data);  
+})
+
+
+document.getElementById("samsung").addEventListener("click",async()=>{
+    let res = await fetch(`${url}?brand=samsung`)
+    let data = await res.json();
+    rendorDom(data);
+})
+
+
+document.getElementById("mi").addEventListener("click",async()=>{
+    console.log()
+    let res = await fetch(`${url}?brand=mi`)
+    let data = await res.json();
+    rendorDom(data);
+})
+
+
+document.getElementById("vivo").addEventListener("click",async()=>{
+    let res = await fetch(`${url}?brand=vivo`)
+    let data = await res.json();
+    rendorDom(data);
+    
+})
+
+
+document.getElementById("oppo").addEventListener("click",()=>{
+    
+})
+
+
+document.getElementById("realme").addEventListener("click",()=>{
+    
+})
 
