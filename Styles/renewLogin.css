@@ -95,124 +95,40 @@
     cursor: pointer;
 }
 
-#renew_slideshow>img{
-    width:100%;
+
+
+#forty{
+    margin-top: 100px;
+    margin-bottom: 48px;
+    text-align: center;
 }
 
-#prev{
-    padding: 15px;
-    position: absolute;
-    top:38%;
-    left:3%;
-    border-radius: 70%;
-    border:none;
+#fortyone{
+    margin-left: 33%;
+}
+
+#fortyone>form>input{
+    width:50%;
+    height:35px;
+    display: block;
+    margin-top: 14px;
+}
+
+#fortytwo{
     cursor:pointer;
+    margin-top: 30px;
+    width:51%;
+    height:40px;
+    font-size: 15px;
+    background-color:aquamarine;
+    border: none;
 }
 
-#next{
-    padding: 15px;
-    position: absolute;
-    top:38%;
-    right:3%;
-    border-radius: 70%;
-    border:none;
-    cursor:pointer;
-}
-
-#seven{
-    margin: auto;
-    margin-top: 15px;
-    width:80%;
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    column-gap: 30px;
-}
-
-#seven>div>img{
-    width:30%;
-    margin-left: 90px;
-}
-
-#seven>div>h5{
+#fortythree{
     text-align: center;
+    margin-bottom: 80px;
 }
 
-#seven>div:nth-child(1)>h5{
-    padding-top: 25px;
-}
-
-#seven>div:nth-child(2)>h5{
-    padding-top: 10px;
-}
-
-#seven>div:nth-child(4)>h5{
-    padding-top: 5px;
-}
-
-#seven>div>p{
-    text-align: center;
-}
-
-#eight>h1{
-    text-align: center;
-    font-size: 45px;
-    
-}
-
-#nine{
-    width:80%;
-    margin: auto;
-    display:grid;
-    grid-template-columns: repeat(2,1fr);
-    column-gap: 0px;
-    cursor: pointer;
-}
-
-#nine>div:first-child{
-    background-color: rgb(12, 41, 53);
-    margin: auto;
-    padding: 30% 40%;
-}
-
-#nine>div>p{
-    color: white;
-    font-size: 18px;
-    
-}
-
-#nine>div>div{
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    column-gap: 50%;
-    
-}
-
-#nine>div>div>h2:first-child{
-    margin-left: -1300%;
-    color:white;
-}
-
-#nine>div>div>h2:nth-child(2){
-    margin-left: -71%;
-    color:teal;
-    font-size: 33px;
-}
-
-#nine>div>div>h2:last-child{
-    margin-left: -650%;
-    color:white;
-}
-
-#nine>div:last-child{
-    background-color: aqua;
-    
-}
-
-#nine>div>img{
-    width:70%;
-    margin-left: 15%;
-    padding: 3% 0%;
-}
 
 #ten{
     
