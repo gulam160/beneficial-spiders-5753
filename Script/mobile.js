@@ -233,12 +233,18 @@ document.getElementById("vivo").addEventListener("click",async()=>{
 })
 
 
-document.getElementById("oppo").addEventListener("click",()=>{
+document.getElementById("oppo").addEventListener("click",async()=>{
+    let res = await fetch(`${url}?brand=oppo`)
+    let data = await res.json();
+    rendorDom(data);
     
 })
 
 
-document.getElementById("realme").addEventListener("click",()=>{
+document.getElementById("realme").addEventListener("click",async()=>{
+    let res = await fetch(`${url}?brand=realme`)
+    let data = await res.json();
+    rendorDom(data);
     
 })
 
