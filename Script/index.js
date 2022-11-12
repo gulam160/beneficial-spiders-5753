@@ -1,5 +1,7 @@
 import navbar from "../components/navbar.js";
 document.getElementById("navbar").innerHTML=navbar();
+import {subNavbar} from "../components/subNavbar.js";
+document.getElementById("navbar-2").innerHTML=subNavbar();
 import {footer} from "../components/footer.js";
 document.getElementById("footer").innerHTML=footer();
 
@@ -74,14 +76,19 @@ function loaderGoogleTranslate(){
 
 // ========================== Navbar Bottom ==========================
 
-let allCategoiesid = document.getElementById("allCategoiesid");
-let moving2 = document.getElementById("moving2");
-let list2 = document.getElementById("list2");
+// let allCategoiesid = document.getElementById("allCategoiesid");
+// let moving2 = document.getElementById("moving2");
+// let list2 = document.getElementById("list2");
 
-allCategoiesid.addEventListener("click",()=>{
-    list2.classList.toggle("hidden1");
-    moving2.classList.toggle("roted");
-});
+// allCategoiesid.addEventListener("click",()=>{
+//     c++;
+//     if(c%2==0){
+//         list2.style.display="none";
+//     }else{
+//         list2.style.display="block";
+//     }
+//     moving2.classList.toggle("roted");
+// });
 
   //  =============================== * ad 1 * =======================
 
