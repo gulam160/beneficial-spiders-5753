@@ -1,4 +1,8 @@
-
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 .navbar-1{
     background-color: #f7f8f9;
     box-shadow: 0 0 2px grey;
@@ -162,6 +166,9 @@
     background-color: white;
     color: black;
     
+}
+.selling_page a{
+    text-decoration: none;
 }
 .selling_page button{
     display: flex;
