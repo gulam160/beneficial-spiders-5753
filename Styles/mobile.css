@@ -3,7 +3,7 @@ body{
 }
 #_style_main_navbar{
     display: flex;
-    gap: 15px;
+    gap: 135px;
     
 }
 
@@ -53,8 +53,12 @@ ul{
 
 #container{
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3,35%);
     gap: 15px;
+    margin-left: 140px;
+    width: 100%;
+    margin: auto;
+    border: 0px solid black;
 }
 
 .product_card{

@@ -1,9 +1,9 @@
 #Box1{
     width: 26%;
     height: auto;
-    
     margin: auto;
-    
+    border: 1px solid grey; 
+    margin-top: 50px;   
 }
 
 #first{
