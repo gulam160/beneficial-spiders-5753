@@ -1,4 +1,9 @@
-
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
 .navbar-1{
     background-color: #f7f8f9;
     box-shadow: 0 0 2px grey;

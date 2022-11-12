@@ -1,5 +1,7 @@
 import navbar from "../components/navbar.js";
 document.getElementById("navbar").innerHTML=navbar();
+import {subNavbar} from "../components/subNavbar.js";
+document.getElementById("navbar-2").innerHTML=subNavbar();
 import {footer} from "../components/footer.js";
 document.getElementById("footer").innerHTML=footer();
 
@@ -73,6 +75,17 @@ language1.addEventListener("click",()=>{
 function loaderGoogleTranslate(){
     new google.translate.TranslateElement("list1")
 }
+
+// ========================== subnavbar ==========================
+
+let allCategoiesid = document.getElementById("allCategoiesid");
+let moving2 = document.getElementById("moving2");
+let list2 = document.getElementById("list2");
+
+allCategoiesid.addEventListener("click",()=>{
+    list2.classList.toggle("hidden1");
+    moving2.classList.toggle("roted");
+});
 
 
 
