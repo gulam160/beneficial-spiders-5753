@@ -26,39 +26,6 @@ let catchinput = (tag) => {
   return document.getElementById(tag).value;
 };
 //---------------step 1, get input values ------------
-let Add_product = async () => {
-  let date = catchinput("date");
-  let img = catchinput("pro_img");
-  let name = catchinput("pro_name");
-  let pri = catchinput("pro_pri");
-  let city = catchinput("pro_city");
-  let desc=catchinput("pro_desc")
-  //--------------step2 ,add input values in product object--
-  let product = {
-    id: Date.now() + "mob",
-    date:date,
-
-    <input type="text" id="distance" placeholder="year - distance">
-    <input type="text" id="date" placeholder="month day">
-    <input type="url" id="pro_img" placeholder="image Url">
-    <input type="text" id="pro_name" placeholder="mobile name">
-    <input type="number" id="pro_pri" placeholder="price">
-    <input type="text" id="brand" placeholder="brand">
-    <input type="text" id="pro_city" placeholder="city">
-    <input type="text" id="pro_desc" placeholder="description">
-    <button onclick="Addproduct()">Add Product</button>
-    <script src="./addproduct.js"></script>
-</body>
-</html>
-<script>
-
-const url = `http://localhost:3000/randomData`;
-
-let catchInput = (tag) => {
-  return document.getElementById(tag).value;
-};
-
-//---------------step 1, get input values ------------
 let Addproduct = async () => {
   let distance = catchInput("distance");
   let date = catchInput("date");
@@ -79,11 +46,7 @@ let Addproduct = async () => {
     city: city,
     description:desc,
     image: img,
-
-  // POST Request
-  //----------Step 3, POST Request --------
-  let res = await fetch(api, {
-
+  }
 
   // POST Request
   //----------Step 3, POST Request --------
