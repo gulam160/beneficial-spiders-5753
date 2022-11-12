@@ -5,7 +5,9 @@ let subNavbar =()=>{
                     
                     <i class="fa-sharp fa-solid fa-chevron-down" id="moving2"></i>
                 </div>
-                <div class="fulldropdown" id="list2">
+                <div class="fulldropdown" id="list2" style="display: none;
+                grid-template-columns: repeat(4,1fr);
+                gap: 10px;">
                     <ul class="propertiesMobile" type="none">
                         <li>
                             <h2>OLX Autos(Cars)</h2>
