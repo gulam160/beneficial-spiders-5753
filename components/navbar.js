@@ -1,12 +1,12 @@
 let navbar=()=>{
     return `<div id="navbar-A">
-                <img src="https://tse2.mm.bing.net/th?id=OIP.w3Xd5s2MjzBiWOyC9FFEGQHaE7&pid=Api&P=0" alt="">
+    <a href="index.html"><img src="https://tse2.mm.bing.net/th?id=OIP.w3Xd5s2MjzBiWOyC9FFEGQHaE7&pid=Api&P=0" alt=""></a>
                 <div id="country" class="country_select">
                     <div class="select">
                         <p id="text"> Select Your Country</p>
                         <i class="fa-sharp fa-solid fa-chevron-down" id="moving"></i>
                     </div>
-                    <ul class="option_box" id="list">
+                    <ul class="option_box" id="list" style="display:none">
                         <li class="option" id="USA">
                             <i class="fa-sharp fa-solid fa-location-dot"></i>
                             <p>USA</p>
@@ -51,7 +51,7 @@ let navbar=()=>{
                     <i class="fa-regular fa-bell"></i>
                 </div>
                 <div class="loginlogo">
-                    <h3>Login</h3>
+                    <a href="login.html"><h3>Login</h3></a>
                 </div>
                 <div class="selling_page">
                     <button><i class="fa-solid fa-plus"></i>
