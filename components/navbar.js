@@ -54,9 +54,11 @@ let navbar=()=>{
                     <a href="login.html"><h3>Login</h3></a>
                 </div>
                 <div class="selling_page">
+                <a href="admin.html">
                     <button><i class="fa-solid fa-plus"></i>
                         <p>SELL</p>
                     </button>
+                </a>
                 </div>
                 </div>`
 };

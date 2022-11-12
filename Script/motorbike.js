@@ -1,3 +1,4 @@
+
 import navbar from "../components/navbar.js";
 document.getElementById("navbar").innerHTML=navbar();
 import {subNavbar} from "../components/subNavbar.js";
