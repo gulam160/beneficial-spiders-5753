@@ -79,7 +79,6 @@ function loaderGoogleTranslate(){
 let allCategoiesid = document.getElementById("allCategoiesid");
 let moving2 = document.getElementById("moving2");
 let list2 = document.getElementById("list2");
-
 allCategoiesid.addEventListener("click",()=>{
     c++;
     if(c%2==0){
