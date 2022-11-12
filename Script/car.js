@@ -77,6 +77,25 @@ function loaderGoogleTranslate(){
     new google.translate.TranslateElement("list1")
 }
 
+// ========================== Navbar Bottom ==========================
+
+let allCategoiesid = document.getElementById("allCategoiesid");
+let moving2 = document.getElementById("moving2");
+let list2 = document.getElementById("list2");
+
+allCategoiesid.addEventListener("click",()=>{
+    c++;
+    if(c%2==0){
+        list2.style.display="none";
+    }else{
+        list2.style.display="block";
+        list2.style.display="grid";
+        list2.style.gridColumn="repeat(4,1fr)";
+        list2.style.gap="20px";
+    }
+    moving2.classList.toggle("roted");
+});
+
 
 
 // ====================================== Car section ============================
