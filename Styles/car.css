@@ -112,6 +112,15 @@ h5{
     border: 1px solid #cfcdcd;
     padding: 5px;
     border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+}
+#main-body div button{
+    margin-bottom: 5px;
+    padding: 5px 0;
+    background: rgb(39, 38, 38);
+    border: none;
+    color: white;
 }
 #main-body div p{
     font-size: 12px;

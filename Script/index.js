@@ -1,3 +1,5 @@
+
+
 import navbar from "../components/navbar.js";
 document.getElementById("navbar").innerHTML=navbar();
 import {subNavbar} from "../components/subNavbar.js";
@@ -383,9 +385,6 @@ let rendorDom=(data)=>{
 
 
       // ==============================  search section =============================
-
-    
-    
     const api= "https://olx-mock-server-gyb9.onrender.com/api/allProducts";
 let id;
 let searchid=document.getElementById("searchid");
