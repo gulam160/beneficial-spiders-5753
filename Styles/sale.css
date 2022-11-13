@@ -1,3 +1,8 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 body{
     font-family: Helvetica, sans-serif;;
 }
@@ -6,6 +11,14 @@ body{
     gap: 60px;
     margin-left:95px;
     
+}
+#navbar{
+    width: 100%;
+
+}
+
+#navbar>div{
+    width: 100%;
 }
 
 #_style_leftnavbar{
