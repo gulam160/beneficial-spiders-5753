@@ -94,7 +94,7 @@ allCategoiesid.addEventListener("click",()=>{
     moving2.classList.toggle("roted");
 });
 
-// // ====================================== mobile section ============================
+// // ====================================== search section ============================
 
 let data=JSON.parse(localStorage.getItem("olxData"));
 console.log(data)
@@ -255,34 +255,34 @@ document.getElementById("iphone").addEventListener("click",async()=>{
     rendorDom(data);  
 })
 
-document.getElementById("samsung").addEventListener("click",async()=>{
-    let res = await fetch(`${url}?brand=samsung`)
-    let data = await res.json();
-    rendorDom(data);
-})
+// document.getElementById("samsung").addEventListener("click",async()=>{
+//     let res = await fetch(`${url}?brand=samsung`)
+//     let data = await res.json();
+//     rendorDom(data);
+// })
 
-document.getElementById("mi").addEventListener("click",async()=>{
-    console.log()
-    let res = await fetch(`${url}?brand=mi`)
-    let data = await res.json();
-    rendorDom(data);
-})
+// document.getElementById("mi").addEventListener("click",async()=>{
+//     console.log()
+//     let res = await fetch(`${url}?brand=mi`)
+//     let data = await res.json();
+//     rendorDom(data);
+// })
 
-document.getElementById("vivo").addEventListener("click",async()=>{
-    let res = await fetch(`${url}?brand=vivo`)
-    let data = await res.json();
-    rendorDom(data);    
-})
+// document.getElementById("vivo").addEventListener("click",async()=>{
+//     let res = await fetch(`${url}?brand=vivo`)
+//     let data = await res.json();
+//     rendorDom(data);    
+// })
 
-document.getElementById("oppo").addEventListener("click",async()=>{
-    let res = await fetch(`${url}?brand=oppo`)
-    let data = await res.json();
-    rendorDom(data);
+// document.getElementById("oppo").addEventListener("click",async()=>{
+//     let res = await fetch(`${url}?brand=oppo`)
+//     let data = await res.json();
+//     rendorDom(data);
     
-})
+// })
 
-document.getElementById("realme").addEventListener("click",async()=>{
-    let res = await fetch(`${url}?brand=realme`)
-    let data = await res.json();
-    rendorDom(data);
-})
+// document.getElementById("realme").addEventListener("click",async()=>{
+//     let res = await fetch(`${url}?brand=realme`)
+//     let data = await res.json();
+//     rendorDom(data);
+// })
