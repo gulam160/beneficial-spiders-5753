@@ -5,7 +5,9 @@ document.getElementById("navbar-2").innerHTML=subNavbar();
 import {footer} from "../components/footer.js";
 document.getElementById("footer").innerHTML=footer();
 
+
 // ================================== Navbar ===========================
+
 
 let country = document.getElementById("country");
 let moving = document.getElementById("moving");
@@ -94,34 +96,74 @@ allCategoiesid.addEventListener("click",()=>{
     moving2.classList.toggle("roted");
 });
 
-// // ====================================== search section ============================
 
-let data=JSON.parse(localStorage.getItem("olxData"));
-console.log(data)
-rendorDom(data)
-    function rendorDom(data) {  
-        let data_container=document.getElementById("main-body");
-        data_container.innerHTML=null;        
-    
-        data.map(function(el){
-            let div = document.createElement("div");
+// ====================================== mobile section ============================
 
-            let poster = document.createElement("img");
-            poster.src = el.image;
-            poster.setAttribute("id", "banner")
-            let amount = document.createElement('h4')
-            amount.innerText = `₹${el.price}`;
-        
-            let name = document.createElement('h4');
-            name.innerText = el.name;
-            let des = document.createElement('p');
-            des.innerText = el.description;
 
-            div.append(poster,name,amount, des)
-            data_container.append(div);
-        });
+let url=`https://sleepy-headland-48374.herokuapp.com/flat`
+let getData=async()=>{
+    let res=await fetch(url);
+    res=await res.json();
+    console.log(res)
+    rendorDom(res)
 
 }
+
+getData()
+
+let Createelem=(tag)=>{
+    return document.createElement(tag);
+}
+
+let card=({name,price,city,image})=>{
+    let div=Createelem('div');
+    let pimg=Createelem('img');
+    let pheart=Createelem('span');
+    let imgcont=Createelem('div');
+    let div2=Createelem('div');
+    let pprice=Createelem('p');
+    let pname=Createelem('p');
+    let pcity=Createelem('p');
+
+    pimg.src=image;
+    pname.innerHTML=name;
+    pcity.innerHTML=city;
+    pprice.innerHTML=`₹ ${price}`;
+    pheart.innerHTML=`<i class="ri-heart-line"></i>`
+
+    div.setAttribute("class","product_card");
+    imgcont.setAttribute("class","heartimg")
+    pimg.setAttribute("class","product_image")
+    pprice.setAttribute("class","product_price item_style");
+    pcity.setAttribute("class","product_city item_style");
+    pname.setAttribute("class","product_name item_style");
+
+
+    div2.setAttribute("class","product_details");
+
+
+    div.onclick=()=>{
+        console.log("click")
+    }
+    div2.append(pprice,pname,pcity)
+    imgcont.append(pimg,pheart)
+    div.append(imgcont,div2)
+    return div
+
+
+}
+
+
+let rendorDom=(data)=>{
+    let cont=document.getElementById("container");
+    cont.innerHTML=null;
+    data.forEach((el) => {
+      //  console.log(el)
+        let product=card(el);
+        cont.append(product)
+    });
+}
+
 //----------------------------------------
 
 document.getElementById("_up_mob").style.display="none";
@@ -138,6 +180,9 @@ let upMob=document.getElementById("_up_mob").addEventListener("click",()=>{
     let mobsec=document.getElementById("mob_section").style.display="block"
    
 })
+
+
+
 
 //--------------------------------------------------------------------
 let state = [
@@ -173,6 +218,8 @@ let state = [
       listselect.append(opt);
     }
     document.querySelector("#city_section").append(listselect);
+    
+
 document.getElementById("_up_city").style.display="none";
 let downCity=document.getElementById("_down_city").addEventListener("click",()=>{
     let upCity=document.getElementById("_up_city").style.display="block";
@@ -190,6 +237,7 @@ let upCity=document.getElementById("_up_city").addEventListener("click",()=>{
 //--------------------------------------------------------------
 
 //----------------- budget ------------------
+
 
 document.getElementById("_up_bud").style.display="none";
 
@@ -214,6 +262,7 @@ output.innerHTML = slider.value;
 
 slider.oninput = function() {
    output.innerHTML = this.value; 
+
 }
 
 let Rvalu=+""
@@ -227,9 +276,15 @@ console.log(Rvalu)
     let data = await res.json();
     rendorDom(data);
     console.log(data)
+
  })
 
+
+
+
 //-----------------  BRAND ----------------------
+
+
 
 document.getElementById("_up_brnd").style.display="none";
 
@@ -239,8 +294,43 @@ let downBrnd=document.getElementById("_down_brnd").addEventListener("click",()=>
     let Budsec=document.getElementById("style_checkbox").style.display="none"
 })
 
-let upBrnd=document.getElementById("_up_brnd").addEventListener("click",()=>{  
+let upBrnd=document.getElementById("_up_brnd").addEventListener("click",()=>{
+    
     let upBrnd2=document.getElementById("_down_brnd").style.display="block";
     let downBrnd=document.getElementById("_up_brnd").style.display="none";
    let Budsec=document.getElementById("style_checkbox").style.display="block"
+   
 })
+
+//--------------    FILTER BRAND      -------   
+
+document.getElementById("Villas").addEventListener("click",async()=>{
+    let res = await fetch(`${url}?type=villas`)
+    let data = await res.json();
+    rendorDom(data);  
+})
+
+
+document.getElementById("farm").addEventListener("click",async()=>{
+    let res = await fetch(`${url}?type=farm`)
+    let data = await res.json();
+    rendorDom(data);
+})
+
+
+document.getElementById("apartment").addEventListener("click",async()=>{
+    console.log()
+    let res = await fetch(`${url}?type=apartment`)
+    let data = await res.json();
+    rendorDom(data);
+})
+
+
+document.getElementById("builder").addEventListener("click",async()=>{
+    let res = await fetch(`${url}?type=builder`)
+    let data = await res.json();
+    rendorDom(data);
+    
+})
+
+
