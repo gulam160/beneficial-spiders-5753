@@ -1,110 +1,110 @@
-import navbar from "../components/navbar.js";
-document.getElementById("navbar").innerHTML=navbar();
-import {subNavbar} from "../components/subNavbar.js";
-document.getElementById("navbar-2").innerHTML=subNavbar();
-import {footer} from "../components/footer.js";
-document.getElementById("footer").innerHTML=footer();
+// import navbar from "../components/navbar.js";
+// document.getElementById("navbar").innerHTML=navbar();
+// import {subNavbar} from "../components/subNavbar.js";
+// document.getElementById("navbar-2").innerHTML=subNavbar();
+// import {footer} from "../components/footer.js";
+// document.getElementById("footer").innerHTML=footer();
 
 
 // ================================== Navbar ===========================
 
 
-let country = document.getElementById("country");
-let moving = document.getElementById("moving");
-let text = document.getElementById("text");
-let list = document.getElementById("list");
-let c1=0
-country.addEventListener("click",()=>{
-    c1++
-    if(c1%2==0){
-        list.style.display="none";
-    }else{
-        list.style.display="block";
-    }
-    moving.classList.toggle("roted");
-});
+// let country = document.getElementById("country");
+// let moving = document.getElementById("moving");
+// let text = document.getElementById("text");
+// let list = document.getElementById("list");
+// let c1=0
+// country.addEventListener("click",()=>{
+//     c1++
+//     if(c1%2==0){
+//         list.style.display="none";
+//     }else{
+//         list.style.display="block";
+//     }
+//     moving.classList.toggle("roted");
+// });
 
-let USA=document.getElementById("USA");
-USA.onclick=()=>{
-    text.innerText="USA";
-}
-let Indan=document.getElementById("Indan");
-Indan.onclick=()=>{
-    text.innerText="Indian";
-}
-let Sri_Lanka=document.getElementById("Sri_Lanka");
-Sri_Lanka.onclick=()=>{
-    text.innerText="Sri_Lanka";
-}
-let Canda=document.getElementById("Canda");
-Canda.onclick=()=>{
-    text.innerText="Canda";
-}
-let Pakistan=document.getElementById("Pakistan");
-Pakistan.onclick=()=>{
-    text.innerText="Pakistan";
-}
+// let USA=document.getElementById("USA");
+// USA.onclick=()=>{
+//     text.innerText="USA";
+// }
+// let Indan=document.getElementById("Indan");
+// Indan.onclick=()=>{
+//     text.innerText="Indian";
+// }
+// let Sri_Lanka=document.getElementById("Sri_Lanka");
+// Sri_Lanka.onclick=()=>{
+//     text.innerText="Sri_Lanka";
+// }
+// let Canda=document.getElementById("Canda");
+// Canda.onclick=()=>{
+//     text.innerText="Canda";
+// }
+// let Pakistan=document.getElementById("Pakistan");
+// Pakistan.onclick=()=>{
+//     text.innerText="Pakistan";
+// }
 
-let language1 = document.getElementById("language1");
-let moving1 = document.getElementById("moving1");
-let list1 = document.getElementById("list1");
-let eng_tag = document.getElementById("eng_tag");
+// let language1 = document.getElementById("language1");
+// let moving1 = document.getElementById("moving1");
+// let list1 = document.getElementById("list1");
+// let eng_tag = document.getElementById("eng_tag");
 
-let eng_eng=document.getElementById("lang_eng");
-eng_eng.addEventListener("click",()=>{
-    eng_tag.innerText="English";
+// let eng_eng=document.getElementById("lang_eng");
+// eng_eng.addEventListener("click",()=>{
+//     eng_tag.innerText="English";
 
-});
+// });
 
-let eng_hin=document.getElementById("lang_hin");
-eng_hin.addEventListener("click",()=>{
-    eng_tag.innerText="हिंदी";
+// let eng_hin=document.getElementById("lang_hin");
+// eng_hin.addEventListener("click",()=>{
+//     eng_tag.innerText="हिंदी";
 
-});
+// });
 
-let c=0;
-language1.addEventListener("click",()=>{
-    c++;
-    if(c%2==0){
-        list1.style.display="none";
-    }else{
-        list1.style.display="block";
-    }
-    moving1.classList.toggle("roted");
-});
-function loaderGoogleTranslate(){
-    new google.translate.TranslateElement("list1")
-}
-
-// ========================== Navbar Bottom ==========================
+// let c=0;
+// language1.addEventListener("click",()=>{
+//     c++;
+//     if(c%2==0){
+//         list1.style.display="none";
+//     }else{
+//         list1.style.display="block";
+//     }
+//     moving1.classList.toggle("roted");
+// });
+// function loaderGoogleTranslate(){
+//     new google.translate.TranslateElement("list1")
+// }
 
 // ========================== Navbar Bottom ==========================
-let allCategoiesid = document.getElementById("allCategoiesid");
-let moving2 = document.getElementById("moving2");
-let list2 = document.getElementById("list2");
 
-allCategoiesid.addEventListener("click",()=>{
-    c++;
-    if(c%2==0){
-        list2.style.display="none";
-    }else{
-        list2.style.display="block";
-        list2.style.display="grid";
-        list2.style.gridColumn="repeat(4,1fr)";
-        list2.style.gap="20px";
-    }
-    moving2.classList.toggle("roted");
-});
+// ========================== Navbar Bottom ==========================
+// let allCategoiesid = document.getElementById("allCategoiesid");
+// let moving2 = document.getElementById("moving2");
+// let list2 = document.getElementById("list2");
+
+// allCategoiesid.addEventListener("click",()=>{
+//     c++;
+//     if(c%2==0){
+//         list2.style.display="none";
+//     }else{
+//         list2.style.display="block";
+//         list2.style.display="grid";
+//         list2.style.gridColumn="repeat(4,1fr)";
+//         list2.style.gap="20px";
+//     }
+//     moving2.classList.toggle("roted");
+// });
 
 
 // ====================================== mobile section ============================
 
 
-let url=`https://sleepy-headland-48374.herokuapp.com/flat`
+let url=`https://olx-database.onrender.com/flat`
 let getData=async()=>{
     let res=await fetch(url);
     res=await res.json();
-    console.log(res)
+   // console.log(res)
     rendorDom(res)
 
 }
@@ -185,6 +185,7 @@ let upMob=document.getElementById("_up_mob").addEventListener("click",()=>{
 
 
 //--------------------------------------------------------------------
+
 let state = [
     "Andhra Pradesh",
     "Arunachal Pradesh",
@@ -205,9 +206,28 @@ let state = [
     "Meghalaya",
     "Mizoram",
     "Nagaland",
-    ]
-    let listselect = document.createElement("select");
+    "Odisha",
+    "Punjab",
+    "Rajasthan",
+    "Sikkim",
+    "Tamil Nadu",
+    "Telangana",
+    "Tripura",
+    "Uttarakhand",
+    "Uttar Pradesh",
+    "West Bengal",
+    "Andaman and Nicobar Islands",
+    "Chandigarh",
+    "Dadra and Nagar Haveli",
+    "Daman and Diu",
+    "Delhi",
+    "Lakshadweep",
+    "Puducherry",
+  ];
+      let listselect = document.createElement("select");
     listselect.setAttribute("class","listcity");
+    listselect.setAttribute("id","cityToSelect");
+
     let opt = "";
     
     for (let x of state) {
@@ -219,6 +239,19 @@ let state = [
     }
     document.querySelector("#city_section").append(listselect);
     
+    
+document.getElementById("cityToSelect").addEventListener("change",async function(){
+    var strState =this.value;
+    let sl_slate=await fetch(`${url}?state=${strState}`)
+    let data=sl_slate.json();
+    rendorDom(data)
+   // console.log(rep)
+    console.log(strState);
+
+})
+
+
+
 
 document.getElementById("_up_city").style.display="none";
 let downCity=document.getElementById("_down_city").addEventListener("click",()=>{
@@ -269,7 +302,7 @@ let Rvalu=+""
 slider.addEventListener("change",()=>{
     Rvalu=+slider.value
 })
-console.log(Rvalu)
+//console.log(Rvalu)
  document.getElementById("budVal").addEventListener("click",async()=>{
     console.log(typeof Rvalu,Rvalu);
     let res = await fetch(`${url}?price_lte=${Rvalu}`)
@@ -333,4 +366,6 @@ document.getElementById("builder").addEventListener("click",async()=>{
     
 })
 
+
+//---------------------------FILTER BY STATE---------------------
 

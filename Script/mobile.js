@@ -100,7 +100,8 @@ allCategoiesid.addEventListener("click",()=>{
 // ====================================== mobile section ============================
 
 
-let url=`https://olxdatabaseapi.herokuapp.com/mobile`
+// let url=`https://olxdatabaseapi.herokuapp.com/mobile`;
+let url=`https://olx-database.onrender.com/mobile`;
 let getData=async()=>{
     let res=await fetch(url);
     res=await res.json();
