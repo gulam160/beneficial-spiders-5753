@@ -3,8 +3,12 @@ body{
 }
 #_style_main_navbar{
     display: flex;
+<<<<<<< HEAD
+    gap: 135px;
+=======
     gap: 60px;
     margin-left:95px;
+>>>>>>> 506c6774891e38140473b3adb8c1a8babc7e9d60
     
 }
 
@@ -59,8 +63,12 @@ ul{
 
 #container{
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3,35%);
     gap: 15px;
+    margin-left: 140px;
+    width: 100%;
+    margin: auto;
+    border: 0px solid black;
 }
 
 .product_card{
@@ -147,7 +155,7 @@ ul{
   }
   
   .slider {
-    -webkit-appearance: none;
+    /* -webkit-appearance: none; */
     width: 100%;
     height: 25px;
     background: #d3d3d3;

@@ -71,98 +71,67 @@ const learnMore = () => {
     
 }
 
-let url=`https://sleepy-headland-48374.herokuapp.com/collection`;
 
-const getData = async () => {
-    let res = await fetch(url);
-    let data = await res.json();
-    renderDom(data);
-}
+let arr = JSON.parse(localStorage.getItem('cart'));
+let sixtyone = document.getElementById('sixtyone');
+sixtyone.innerHTML = null;
+let totalPrice = 0;
 
-getData();
+let div1 = document.createElement('div');
+arr.forEach((el) => {
+    let div3 = document.createElement('div');
+    let img = document.createElement('img');
+    img.src = el.image;
 
-const renderDom = (data) => {
-    let products = document.getElementById('products');
-    products.innerHTML = null;
-    products.style.width="90%";
-    //products.style.margin = "auto";
-    products.style.display = "grid";
-    products.style.gridTemplateColumns = "30% 30% 30%";
-    products.style.gap = "5%";
+    let div4 = document.createElement('div');
 
-    data.forEach(({id,image,brand,model,price}) => {
-        let div = document.createElement('div');
-        div.style.cursor="pointer";
-        let i = document.createElement('img');
-        i.src=image;
-        i.style.width = "100%";
-        
-        let b =document.createElement('h3');
-        b.innerText=`${brand} ${model}`;
-        b.style.textAlign = "center";
+    let h4 = document.createElement('h4');
+    h4.innerText = `${el.brand} ${el.model}`;
 
-        let p =document.createElement('h4');
-        p.innerText = `From Rs. ${price}`;
-        p.style.textAlign = "center";
-        p.style.color = "teal";
+    let h5 = document.createElement('h5');
+    h5.innerText = `Rs. ${el.price}.00`;
 
-        div.append(i,b,p);
-        products.append(div);
+    totalPrice+=el.price;
 
-        div.addEventListener('click',() => {
+    div4.append(h4,h5);
+    div4.style.marginTop = "50px";
 
-            let obj={image,brand,model,price};
-            localStorage.setItem("product",JSON.stringify(obj));
-            window.location.href="./renewProduct.html";
-        });
-    });
-}
-
-let sortAsc = async () => {
-    let res = await fetch(`https://sleepy-headland-48374.herokuapp.com/collection/?_sort=price&_order=asc`);
-    let data = await res.json();
+    div3.append(img,div4);
+    div3.style.display = "grid";
+    div3.style.gridTemplateColumns = "50% 40%";
+    div3.style.columnGap = "10%";
     
-    renderDom(data);
-}
+    div1.append(div3);
 
-let sortDesc = async () => {
-    let res = await fetch(`https://sleepy-headland-48374.herokuapp.com/collection/?_sort=price&_order=desc`);
-    let data = await res.json();
-    
-    renderDom(data);
-}
+});
 
-let apple = async () => {
-    let res = await fetch(`https://sleepy-headland-48374.herokuapp.com/collection/?title=json-server&brand=Apple`);
-    let data = await res.json();
-    
-    renderDom(data);
-}
+let div2 = document.createElement('div');
+let div6 = document.createElement('div');
+let t1 = document.createElement('h3');
+t1.innerText = "Total";
+let t2 = document.createElement('h3');
+t2.innerText = `Rs. ${totalPrice}`;
+div6.append(t1,t2);
+div6.style.display = "grid";
+div6.style.gridTemplateColumns = "30% 50%"
+div6.style.columnGap = "10%";
 
-let samsung = async () => {
-    let res = await fetch(`https://sleepy-headland-48374.herokuapp.com/collection/?title=json-server&brand=Samsung`);
-    let data = await res.json();
-    
-    renderDom(data);
-}
+div6.append(t1,t2);
+let btn = document.createElement('button');
+btn.innerText = "CHECKOUT";
+btn.style.backgroundColor = "teal";
+btn.style.width = "80%";
+btn.style.border = "none";
+btn.style.padding = "10px";
+btn.style.cursor = "pointer";
+btn.addEventListener('click', ()=> {
+    localStorage.setItem('totalPrice',JSON.stringify(totalPrice));
+    window.location.href = "./renewPayment.html";
+});
+div2.append(div6,btn);
+div2.style.marginLeft = "20%";
+div2.style.marginTop = "60px";
 
-let oneplus = async () => {
-    let res = await fetch(`https://sleepy-headland-48374.herokuapp.com/collection/?title=json-server&brand=One Plus`);
-    let data = await res.json();
-    
-    renderDom(data);
-}
-
-let xiaomi = async () => {
-    let res = await fetch(`https://sleepy-headland-48374.herokuapp.com/collection/?title=json-server&brand=Xiaomi`);
-    let data = await res.json();
-    
-    renderDom(data);
-}
-
-let realme = async () => {
-    let res = await fetch(`https://sleepy-headland-48374.herokuapp.com/collection/?title=json-server&brand=Realme`);
-    let data = await res.json();
-    
-    renderDom(data);
-}
+sixtyone.append(div1,div2);
+sixtyone.style.display = "grid";
+sixtyone.style.gridTemplateColumns = "50% 30%";

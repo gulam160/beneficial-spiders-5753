@@ -7,6 +7,7 @@ document.getElementById("navbar-2").innerHTML=subNavbar();
 import {footer} from "../components/footer.js";
 document.getElementById("footer").innerHTML=footer();
 
+// let ashu=JSON.parse(localStorage.getItem("olxData"))||[];
 // ========================== Navbar top ==========================
 
 let country = document.getElementById("country");
@@ -271,7 +272,7 @@ DisplayData(randomProduct);
             div2.setAttribute("class","product_details");
 
             div.onclick=()=>{
-                console.log("click")
+                gotonewpage(elem)
             }
             div2.append(pprice,pname,pdescription,pdate)
             imgcont.append(pimg,pheart)
@@ -279,6 +280,17 @@ DisplayData(randomProduct);
             cont.append(div)
         });
     }
+let gotonewpage=(data)=>{
+
+console.log(data)
+    localStorage.setItem("neProductpage",JSON.stringify(data))
+    window.location.href="product.html"
+}
+
+
+
+
+
 
     const productContainers = [...document.querySelectorAll('#container')];
     const nxtBtn = [...document.querySelectorAll('.nxt-btn')];
@@ -299,7 +311,7 @@ productContainers.forEach((item, i) => {
 
 // <!-- ===============  Fresh recommendations  ======================
 
-let url=`http://localhost:3000/randomData`
+let url=`https://olx-mock-server-gyb9.onrender.com/api/randomData`
 let getData=async()=>{
     let res=await fetch(url);
     res=await res.json();
@@ -365,7 +377,7 @@ pheart.onclick=()=>{
 }
 let rendorDom=(data)=>{
     let cont=document.getElementById("random-container");
-    cont.innerHTML=null;
+    // cont.innerHTML=null;
     data.forEach((el) => {
       //  console.log(el)
         let product=card(el);
@@ -380,4 +392,44 @@ let rendorDom=(data)=>{
 
       adicon2.addEventListener('click', () => {
           ads_img2.style = 'display: none';
-      });
+      });   
+
+
+      // ==============================  search section =============================
+    const api= "https://olx-mock-server-gyb9.onrender.com/api/allProducts";
+let id;
+let searchid=document.getElementById("searchid");
+searchid.oninput=()=>{
+        if(id){
+            clearTimeout(id)
+        }
+        id=setTimeout(()=>{
+            let q=searchid.value
+            // console.log(q)
+            searchProduct(q)
+
+        },1000)
+}
+
+let searchProduct=async(q)=>{
+    let res=await fetch(api)
+    let data=await res.json();
+    myfun(data,q);
+    // appendData(data,url)
+}
+
+let myfun=(data,q)=>{
+    let arr=[];
+    // console.log(data,q)
+    if(q!==""){
+        for(let i=0;i<data.length;i++){
+            let proname=data[i].name
+            if(proname.includes(q)){
+                arr.push(data[i]);
+                localStorage.setItem("olxData",JSON.stringify(arr))
+                window.location.href="search.html";
+                // console.log(data[i])
+            }
+        }
+    }
+}  

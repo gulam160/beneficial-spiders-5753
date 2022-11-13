@@ -1,9 +1,4 @@
 
-import navbar from "../components/navbar.js";
-document.getElementById("navbar").innerHTML=navbar();
-import {footer} from "../components/footer.js";
-document.getElementById("footer").innerHTML=footer();
-
 var store_data=JSON.parse(localStorage.getItem("userData"))
 
 var form=document.querySelector("form");
