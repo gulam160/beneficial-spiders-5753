@@ -1,0 +1,15 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+max-width: 70%;
+display: flex;
+margin: auto;
+margin-top: 50px;
+background-color: aquamarine;
+
+}
+.banner{
+    width:70%;
+}
