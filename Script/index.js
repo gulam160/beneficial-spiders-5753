@@ -298,7 +298,7 @@ productContainers.forEach((item, i) => {
 
 // <!-- ===============  Fresh recommendations  ======================
 
-let url=`http://localhost:3000/api/randomData`
+let url=`https://olx-mock-server-gyb9.onrender.com/api/randomData`
 let getData=async()=>{
     let res=await fetch(url);
     res=await res.json();
@@ -386,7 +386,7 @@ let rendorDom=(data)=>{
 
     
     
-    const api= "http://localhost:3000/api/allProducts";
+    const api= "https://olx-mock-server-gyb9.onrender.com/api/allProducts";
 let id;
 let searchid=document.getElementById("searchid");
 searchid.oninput=()=>{

@@ -173,8 +173,6 @@ let state = [
       listselect.append(opt);
     }
     document.querySelector("#city_section").append(listselect);
-    
-
 document.getElementById("_up_city").style.display="none";
 let downCity=document.getElementById("_down_city").addEventListener("click",()=>{
     let upCity=document.getElementById("_up_city").style.display="block";
@@ -246,43 +244,3 @@ let upBrnd=document.getElementById("_up_brnd").addEventListener("click",()=>{
     let downBrnd=document.getElementById("_up_brnd").style.display="none";
    let Budsec=document.getElementById("style_checkbox").style.display="block"
 })
-
-//--------------    FILTER BRAND      -------   
-
-document.getElementById("iphone").addEventListener("click",async()=>{
-    let res = await fetch(`${url}?brand=iphone`)
-    let data = await res.json();
-    rendorDom(data);  
-})
-
-// document.getElementById("samsung").addEventListener("click",async()=>{
-//     let res = await fetch(`${url}?brand=samsung`)
-//     let data = await res.json();
-//     rendorDom(data);
-// })
-
-// document.getElementById("mi").addEventListener("click",async()=>{
-//     console.log()
-//     let res = await fetch(`${url}?brand=mi`)
-//     let data = await res.json();
-//     rendorDom(data);
-// })
-
-// document.getElementById("vivo").addEventListener("click",async()=>{
-//     let res = await fetch(`${url}?brand=vivo`)
-//     let data = await res.json();
-//     rendorDom(data);    
-// })
-
-// document.getElementById("oppo").addEventListener("click",async()=>{
-//     let res = await fetch(`${url}?brand=oppo`)
-//     let data = await res.json();
-//     rendorDom(data);
-    
-// })
-
-// document.getElementById("realme").addEventListener("click",async()=>{
-//     let res = await fetch(`${url}?brand=realme`)
-//     let data = await res.json();
-//     rendorDom(data);
-// })
