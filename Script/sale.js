@@ -100,7 +100,7 @@ allCategoiesid.addEventListener("click",()=>{
 // ====================================== mobile section ============================
 
 
-let url=`https://olxdatabaseapi.herokuapp.com/mobile`
+let url=`https://sleepy-headland-48374.herokuapp.com/flat`
 let getData=async()=>{
     let res=await fetch(url);
     res=await res.json();
@@ -304,48 +304,33 @@ let upBrnd=document.getElementById("_up_brnd").addEventListener("click",()=>{
 
 //--------------    FILTER BRAND      -------   
 
-document.getElementById("iphone").addEventListener("click",async()=>{
-    let res = await fetch(`${url}?brand=iphone`)
+document.getElementById("Villas").addEventListener("click",async()=>{
+    let res = await fetch(`${url}?type=villas`)
     let data = await res.json();
     rendorDom(data);  
 })
 
 
-document.getElementById("samsung").addEventListener("click",async()=>{
-    let res = await fetch(`${url}?brand=samsung`)
+document.getElementById("farm").addEventListener("click",async()=>{
+    let res = await fetch(`${url}?type=farm`)
     let data = await res.json();
     rendorDom(data);
 })
 
 
-document.getElementById("mi").addEventListener("click",async()=>{
+document.getElementById("apartment").addEventListener("click",async()=>{
     console.log()
-    let res = await fetch(`${url}?brand=mi`)
+    let res = await fetch(`${url}?type=apartment`)
     let data = await res.json();
     rendorDom(data);
 })
 
 
-document.getElementById("vivo").addEventListener("click",async()=>{
-    let res = await fetch(`${url}?brand=vivo`)
-    let data = await res.json();
-    rendorDom(data);
-    
-})
-
-
-document.getElementById("oppo").addEventListener("click",async()=>{
-    let res = await fetch(`${url}?brand=oppo`)
+document.getElementById("builder").addEventListener("click",async()=>{
+    let res = await fetch(`${url}?type=builder`)
     let data = await res.json();
     rendorDom(data);
     
 })
 
-
-document.getElementById("realme").addEventListener("click",async()=>{
-    let res = await fetch(`${url}?brand=realme`)
-    let data = await res.json();
-    rendorDom(data);
-    
-})
 

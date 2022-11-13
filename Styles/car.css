@@ -4,6 +4,9 @@
     box-sizing: border-box;
     font-family: Roboto,Arial,Helvetica,sans-serif;
 }
+#navbar>div{
+    width: 100%;
+}
 #list-container{
     width: 99%;
     margin: 0 auto;

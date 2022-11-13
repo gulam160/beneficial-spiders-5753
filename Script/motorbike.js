@@ -1,5 +1,8 @@
+
 import navbar from "../components/navbar.js";
 document.getElementById("navbar").innerHTML=navbar();
+import {subNavbar} from "../components/subNavbar.js";
+document.getElementById("navbar-2").innerHTML=subNavbar();
 import {footer} from "../components/footer.js";
 document.getElementById("footer").innerHTML=footer();
 
@@ -73,6 +76,27 @@ language1.addEventListener("click",()=>{
 function loaderGoogleTranslate(){
     new google.translate.TranslateElement("list1")
 }
+
+// ========================== subnavbar ==========================
+
+// ========================== Navbar Bottom ==========================
+
+let allCategoiesid = document.getElementById("allCategoiesid");
+let moving2 = document.getElementById("moving2");
+let list2 = document.getElementById("list2");
+
+allCategoiesid.addEventListener("click",()=>{
+    c++;
+    if(c%2==0){
+        list2.style.display="none";
+    }else{
+        list2.style.display="block";
+        list2.style.display="grid";
+        list2.style.gridColumn="repeat(4,1fr)";
+        list2.style.gap="20px";
+    }
+    moving2.classList.toggle("roted");
+});
 
 
 
