@@ -271,7 +271,7 @@ DisplayData(randomProduct);
             div2.setAttribute("class","product_details");
 
             div.onclick=()=>{
-                console.log("click")
+                gotonewpage(elem)
             }
             div2.append(pprice,pname,pdescription,pdate)
             imgcont.append(pimg,pheart)
@@ -279,6 +279,17 @@ DisplayData(randomProduct);
             cont.append(div)
         });
     }
+let gotonewpage=(data)=>{
+
+console.log(data)
+    localStorage.setItem("neProductpage",JSON.stringify(data))
+    window.location.href="product.html"
+}
+
+
+
+
+
 
     const productContainers = [...document.querySelectorAll('#container')];
     const nxtBtn = [...document.querySelectorAll('.nxt-btn')];
