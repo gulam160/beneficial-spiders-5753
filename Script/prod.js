@@ -1,4 +1,6 @@
 
+
+
 let que=JSON.parse(localStorage.getItem("neProductpage"))||{}
 
 let box=document.getElementById("container")
