@@ -71,61 +71,7 @@ const learnMore = () => {
     
 }
 
-const photo = ["https://cdn.shopify.com/s/files/1/0650/4044/9786/files/Yellow_Desktop.png?v=1660150368&width=1400",
-"https://cdn.shopify.com/s/files/1/0650/4044/9786/files/Teal_Desktop.png?v=1660150368&width=1400",
-"https://cdn.shopify.com/s/files/1/0650/4044/9786/files/Red_Desktop.png?v=1660150368&width=1400"];
-
-
-let i=0;
-let img=document.createElement('img');
-img.src=photo[0];
-img.style.width = "100%";
-
-
-let cont = document.getElementById("picture");
-cont.style.marginTop="20px";
-cont.append(img);
-
-const plus = () => {
-    let cont = document.getElementById("picture");
-    cont.innerHTML=null;
-    let img = document.createElement('img');
-    img.src = photo[(++i)%3];
-    img.style.width = "100%";
-    cont.append(img);
-    
-}
-
-const minus = () => {
-    let cont = document.getElementById("picture");
-    cont.innerHTML=null;
-    i--;
-    if(i<0)
-    {
-        i=2;
-    }
-    let img = document.createElement('img');
-    img.src = photo[i%3];
-    img.style.width = "100%";
-
-    cont.append(img);
-    
-}
-
-window.onscroll = function() {scrollFunction()};
-function scrollFunction() {
-  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-    document.getElementById("prev").style.display = "none";
-    document.getElementById("next").style.display = "none";
-  }
-  else
-  {
-    document.getElementById("prev").style.display = "block";
-    document.getElementById("next").style.display = "block";
-  }
-}
-
-let url=`https://sleepy-headland-48374.herokuapp.com/renewMobile`;
+let url=`https://sleepy-headland-48374.herokuapp.com/collection`;
 
 const getData = async () => {
     let res = await fetch(url);
@@ -136,13 +82,14 @@ const getData = async () => {
 getData();
 
 const renderDom = (data) => {
-    let favourites = document.getElementById("favourites");
-    favourites.innerHTML=null;
-    favourites.style.width="75%";
-    favourites.style.margin = "auto";
-    favourites.style.display = "grid";
-    favourites.style.gridTemplateColumns = "25% 25% 25% 25%";
-    
+    let products = document.getElementById('products');
+    products.innerHTML = null;
+    products.style.width="90%";
+    //products.style.margin = "auto";
+    products.style.display = "grid";
+    products.style.gridTemplateColumns = "30% 30% 30%";
+    products.style.gap = "5%";
+
     data.forEach(({id,image,brand,model,price}) => {
         let div = document.createElement('div');
         div.style.cursor="pointer";
@@ -160,6 +107,55 @@ const renderDom = (data) => {
         p.style.color = "teal";
 
         div.append(i,b,p);
-        favourites.append(div);
+        products.append(div);
     });
+}
+
+let sortAsc = async () => {
+    let res = await fetch(`https://sleepy-headland-48374.herokuapp.com/collection/?_sort=price&_order=asc`);
+    let data = await res.json();
+    
+    renderDom(data);
+}
+
+let sortDesc = async () => {
+    let res = await fetch(`https://sleepy-headland-48374.herokuapp.com/collection/?_sort=price&_order=desc`);
+    let data = await res.json();
+    
+    renderDom(data);
+}
+
+let apple = async () => {
+    let res = await fetch(`https://sleepy-headland-48374.herokuapp.com/collection/?title=json-server&brand=Apple`);
+    let data = await res.json();
+    
+    renderDom(data);
+}
+
+let samsung = async () => {
+    let res = await fetch(`https://sleepy-headland-48374.herokuapp.com/collection/?title=json-server&brand=Samsung`);
+    let data = await res.json();
+    
+    renderDom(data);
+}
+
+let oneplus = async () => {
+    let res = await fetch(`https://sleepy-headland-48374.herokuapp.com/collection/?title=json-server&brand=One Plus`);
+    let data = await res.json();
+    
+    renderDom(data);
+}
+
+let xiaomi = async () => {
+    let res = await fetch(`https://sleepy-headland-48374.herokuapp.com/collection/?title=json-server&brand=Xiaomi`);
+    let data = await res.json();
+    
+    renderDom(data);
+}
+
+let realme = async () => {
+    let res = await fetch(`https://sleepy-headland-48374.herokuapp.com/collection/?title=json-server&brand=Realme`);
+    let data = await res.json();
+    
+    renderDom(data);
 }

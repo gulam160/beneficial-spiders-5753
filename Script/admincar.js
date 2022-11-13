@@ -3,20 +3,17 @@ let url = `https://mock-server-app-u4oe.onrender.com/api/car`
 let page = 1;
 
 const increamentPage = () => {
-    if(page == 2){
-        return;
-    }
     page++;
     fetchCars(page);
 }
 
 const fetchCars = async() => {
-    let res = await fetch(`${url}?_page=${page}&_limit=9`);
+    let res = await fetch(`${url}?_page=${page}&_limit=12`);
     let data = await res.json();
     renderDOM(data);
 }
 
-const card = (image, price, year, model, name, location) => {
+const card = (image, price, year, model, name, location, id) => {
     let div = document.createElement("div");
 
     let poster = document.createElement("img");
@@ -30,8 +27,19 @@ const card = (image, price, year, model, name, location) => {
     carName.innerText = `${model} - ${name}`
     let area = document.createElement('p');
     area.innerText = location;
+    let deletebtn = document.createElement("button");
+    deletebtn.innerText = "Delete";
+    deletebtn.onclick = () => {
+        deleteCar(id);
+    }
 
-    div.append(poster, amount, advertDate, carName, area)
+    let updtbtn = document.createElement("button");
+    updtbtn.innerText = "Update Price"
+    updtbtn.onclick = () => {
+        updatePrice(id);
+    }
+
+    div.append(poster, amount, advertDate, carName, area, deletebtn, updtbtn)
     return div;
 }
 
@@ -39,10 +47,30 @@ const renderDOM = (data) => {
     let container = document.getElementById("main-body");
     container.innerHTML = null;
 
-    data.forEach(({image, price, post, model, name, location})=>{
-        let box = card(image, price, post, model, name, location);
+    data.forEach(({image, price, post, model, name, location, id})=>{
+        let box = card(image, price, post, model, name, location, id);
         container.append(box)
     })
+}
+
+const deleteCar = async(id) => {
+    await fetch(`${url}/${id}`, {
+        method : "DELETE"
+    });
+    fetchCars();
+};
+
+const updatePrice = async(id) => {
+    let newPrice = +window.prompt("ENTER NEW PRICE");
+    let data = { price : newPrice}
+    await fetch(`${url}/${id}`, {
+        method : "PATCH",
+        body : JSON.stringify(data),
+        headers : {
+            "Content-Type" : "application/json"
+        }
+    });
+    fetchCars();
 }
 
 const searhCar = async() => {

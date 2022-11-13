@@ -71,95 +71,34 @@ const learnMore = () => {
     
 }
 
-const photo = ["https://cdn.shopify.com/s/files/1/0650/4044/9786/files/Yellow_Desktop.png?v=1660150368&width=1400",
-"https://cdn.shopify.com/s/files/1/0650/4044/9786/files/Teal_Desktop.png?v=1660150368&width=1400",
-"https://cdn.shopify.com/s/files/1/0650/4044/9786/files/Red_Desktop.png?v=1660150368&width=1400"];
-
-
-let i=0;
-let img=document.createElement('img');
-img.src=photo[0];
-img.style.width = "100%";
-
-
-let cont = document.getElementById("picture");
-cont.style.marginTop="20px";
-cont.append(img);
-
-const plus = () => {
-    let cont = document.getElementById("picture");
-    cont.innerHTML=null;
-    let img = document.createElement('img');
-    img.src = photo[(++i)%3];
-    img.style.width = "100%";
-    cont.append(img);
+const Login = async () => {
     
-}
-
-const minus = () => {
-    let cont = document.getElementById("picture");
-    cont.innerHTML=null;
-    i--;
-    if(i<0)
-    {
-        i=2;
-    }
-    let img = document.createElement('img');
-    img.src = photo[i%3];
-    img.style.width = "100%";
-
-    cont.append(img);
+    let login_email = document.getElementById('email').value;
+    let login_password = document.getElementById('password').value;
     
-}
 
-window.onscroll = function() {scrollFunction()};
-function scrollFunction() {
-  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-    document.getElementById("prev").style.display = "none";
-    document.getElementById("next").style.display = "none";
-  }
-  else
-  {
-    document.getElementById("prev").style.display = "block";
-    document.getElementById("next").style.display = "block";
-  }
-}
+    const url=`https://sleepy-headland-48374.herokuapp.com/auth`;
 
-let url=`https://sleepy-headland-48374.herokuapp.com/renewMobile`;
-
-const getData = async () => {
     let res = await fetch(url);
     let data = await res.json();
-    renderDom(data);
-}
+    //console.log("data:",data);
 
-getData();
-
-const renderDom = (data) => {
-    let favourites = document.getElementById("favourites");
-    favourites.innerHTML=null;
-    favourites.style.width="75%";
-    favourites.style.margin = "auto";
-    favourites.style.display = "grid";
-    favourites.style.gridTemplateColumns = "25% 25% 25% 25%";
-    
-    data.forEach(({id,image,brand,model,price}) => {
-        let div = document.createElement('div');
-        div.style.cursor="pointer";
-        let i = document.createElement('img');
-        i.src=image;
-        i.style.width = "100%";
-        
-        let b =document.createElement('h3');
-        b.innerText=`${brand} ${model}`;
-        b.style.textAlign = "center";
-
-        let p =document.createElement('h4');
-        p.innerText = `From Rs. ${price}`;
-        p.style.textAlign = "center";
-        p.style.color = "teal";
-
-        div.append(i,b,p);
-        favourites.append(div);
-    });
+    let flag=false;
+    for(let i=0;i<data.length;i++)
+    {
+        let obj=data[i];
+        if(obj.email==login_email)
+        {
+            if(obj.password==login_password)
+            {
+                alert("Authorization successful");
+                flag=true;
+                window.location.href="renewmobile.html";
+            }
+        }
+    }
+    if(flag==false)
+    {
+        alert("Invalid credentials");
+    }
 }
