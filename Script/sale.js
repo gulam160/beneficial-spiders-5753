@@ -244,8 +244,9 @@ document.getElementById("cityToSelect").addEventListener("change",async function
     var strState =this.value;
     console.log(strState);
     let sl_slate=await fetch(`${url}?state=${strState}`)
-    let data=sl_slate.json();
-    rendorDom(data)
+    let data= await sl_slate.json();
+   rendorDom(data)
+   // getData()
    // console.log(rep)
     console.log(strState);
 
